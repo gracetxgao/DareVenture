@@ -1,10 +1,17 @@
 import { Text, View } from 'react-native';
-import { Button } from '@rneui/themed';
+import { Button } from 'react-native-elements';
+import { Input } from 'react-native-elements';
 
 const LoginScreen = ({ navigation }) => {
     return (
         <View>
-            <Text>login screen</Text>
+            <Text>login</Text>
+            <Input
+                placeholder='email'
+            />
+            <Input
+                placeholder='password'
+            />
             <Button
                 title="login"
                 onPress={() =>
@@ -12,7 +19,7 @@ const LoginScreen = ({ navigation }) => {
                 }
             />
             <Button
-                title="signup"
+                title="create an account"
                 onPress={() =>
                     navigation.navigate('Signup')
                 }

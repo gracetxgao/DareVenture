@@ -1,8 +1,13 @@
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
+import VentureCard from './components/VentureCard';
 
 const HomeScreen = () => {
     return (
-        <Text>home</Text>
+        <View>
+            <Text>today's venture</Text>
+            <Text>popular venture</Text>
+            <VentureCard/>
+        </View>
     )
 }
 

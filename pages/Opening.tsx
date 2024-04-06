@@ -1,13 +1,13 @@
-import { Text, View } from 'react-native';
-import { Button } from '@rneui/themed';
+import { Text, View, StyleSheet } from 'react-native';
+import { Button } from 'react-native-elements';
 
 
 const OpeningScreen = ({ navigation }) => {
     
     return (
-        <View>
-            <Text>DareVenture</Text>
-            <Button
+        <View style={styles.container}>
+            <Text style={styles.title}>DareVenture</Text>
+            <Button style={styles.button}
                 title="Login"
                 onPress={() =>
                     navigation.navigate('Login')
@@ -16,5 +16,21 @@ const OpeningScreen = ({ navigation }) => {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    title: {
+        fontSize: 30,
+        paddingBottom: 20
+    },
+    button: {
+        margin: 20
+    }
+  });
 
 export default OpeningScreen;
