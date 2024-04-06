@@ -4,7 +4,7 @@ import VentureCard from './components/VentureCard';
 const HomeScreen = () => {
     return (
         <View>
-            <Text>today's venture</Text>
+            <Text>today's veadfasdfadfasdfnture</Text>
             <Text>popular venture</Text>
             <VentureCard/>
         </View>
