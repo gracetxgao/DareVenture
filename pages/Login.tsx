@@ -1,8 +1,23 @@
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
+import { Button } from '@rneui/themed';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
     return (
-        <Text>login screen</Text>
+        <View>
+            <Text>login screen</Text>
+            <Button
+                title="login"
+                onPress={() =>
+                    navigation.navigate('Home')
+                }
+            />
+            <Button
+                title="signup"
+                onPress={() =>
+                    navigation.navigate('Signup')
+                }
+            />
+        </View>
     )
 }
 
