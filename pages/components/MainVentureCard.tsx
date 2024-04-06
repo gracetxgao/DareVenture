@@ -23,7 +23,7 @@ const MainVentureCard = () => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        borderWidth: 5,
+        borderWidth: 1,
         borderColor: 'black',
     },
     image: {

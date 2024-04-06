@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-const VentureCard = ({ title }) => {
+const ProductCard = ({ title }) => {
   return (
     <View style={styles.container}>
       <View>
-        <Image source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/330px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'}}
+        <Image source={{uri: 'https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S24-X000009293-Atom-Lightweight-Hoody-Alpine-Rose-Women-s-Front-View.jpg?auto=format%2Ccompress&q=75&ixlib=react-9.7.0&w=1350'}}
               style={styles.image} />
       </View>
       <View>
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default VentureCard;
+export default ProductCard;

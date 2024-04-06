@@ -1,16 +1,16 @@
-import VentureCard from "./VentureCard"
+import ProductCard from './ProductCard';
 import { View, StyleSheet, ScrollView } from 'react-native';
 
-interface VenturesBoxTypes {
+interface ProductsBoxTypes {
     cards: Array<String>
 }
 
-const VenturesBox = ({ cards }: VenturesBoxTypes) => {
-    const VentureCards = cards.map((card, index) => <VentureCard key={index} title={card}/>)
+const ProductsBox = ({ cards }: ProductsBoxTypes) => {
+    const ProductCards = cards.map((card, index) => <ProductCard key={index} title={card}/>)
 
     return (
         <ScrollView horizontal={true} style={styles.container}>
-            {VentureCards}
+            {ProductCards}
         </ScrollView>
     )
 }
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default VenturesBox;
+export default ProductsBox;
