@@ -8,7 +8,7 @@ const HomeScreen = () => {
         <View style={styles.container}>
             <Text>today's venture</Text>
             <MainVentureCard />
-            <Text>popular venture</Text>
+            <Text>popular ventures</Text>
             <VenturesBox cards={["first", "second", "third"]}/>
         </View>
     )
@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection:'column',
+        justifyContent: 'flex-start'
     },
 });
 

@@ -1,20 +1,26 @@
 import VentureCard from "./VentureCard"
-import { View, StyleSheet} from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 
 interface VenturesBoxTypes {
     cards: Array<String>
 }
 
 const VenturesBox = ({ cards }: VenturesBoxTypes) => {
-    const VentureCards = [
-        cards.map(card => <VentureCard key={cards.indexOf(card)}/>)
-    ]
+    const VentureCards = cards.map((card, index) => <VentureCard key={index} title={card}/>)
 
     return (
-        <View>
+        <ScrollView horizontal={true} style={styles.container}>
             {VentureCards}
-        </View>
+        </ScrollView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'row',
+        borderWidth: 5,
+        borderColor: 'black',
+    },
+});
 
 export default VenturesBox;
