@@ -18,11 +18,11 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
+        paddingTop:50,
         flex: 1,
         flexDirection:'column',
         justifyContent: 'flex-start',
         backgroundColor: '#fff',
-    
     },
     title: {
         fontSize: 25,
