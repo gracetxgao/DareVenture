@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         borderWidth: 1,
-        borderColor: 'black'
+        borderColor: 'lightgrey',
+        borderRadius: 20,
+        marginLeft:10,
     },
     image: {
       marginLeft: 10,
