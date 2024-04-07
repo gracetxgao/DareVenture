@@ -6,9 +6,9 @@ import VenturesBox from './components/VenturesBox';
 const HomeScreen = () => {
     return (
         <View style={styles.container}>
-            <Text>today's venture</Text>
+            <Text style={styles.title}>Today's Venture</Text>
             <MainVentureCard />
-            <Text>popular ventures</Text>
+            <Text style={styles.title}>Popular Ventures</Text>
             <VenturesBox cards={["first", "second", "third"]}/>
         </View>
     )
@@ -18,8 +18,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection:'column',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        backgroundColor: '#fff',
     },
+    title: {
+        fontSize: 25,
+        fontWeight: 'bold',
+        paddingBottom: 20,
+    }
 });
 
 export default HomeScreen;

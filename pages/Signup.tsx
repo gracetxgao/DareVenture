@@ -6,14 +6,16 @@ const SignupScreen = ({ navigation }) => {
         <View style={styles.container}>
             <Text style={styles.title}>Sign Up</Text>
             <Input
-                placeholder='name'
-                
+                placeholder='Name'
+                style={styles.input}
             />
             <Input
-                placeholder='email'
+                placeholder='Email'
+                style={styles.input}
             />
             <Input
-                placeholder='password'
+                placeholder='Password'
+                style={styles.input}
             />
             <CheckBox
                 title='I would like to receive your newsletter and other promotional information.'
@@ -47,6 +49,11 @@ const styles = StyleSheet.create({
         width:300,
         marginTop: 30,
     },
+    input: {
+        borderStyle: 'solid',
+        backgroundColor: '#F6F6F6',
+        borderColor: '#E8E8E8',
+    }
     
 
 });
