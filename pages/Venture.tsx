@@ -22,11 +22,16 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         alignItems: 'center',
         backgroundColor: '#fff',
+        paddingTop: 50,
+        paddingLeft: 30,
+        paddingRight: 30,
+        paddingBottom: 170,
     },
     image: {
       width: 350, 
       height: 250,
       borderRadius: 20,
+      marginTop: 10,
     },
     title:{
         fontSize: 25,
@@ -38,11 +43,13 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         color: '#AEAEAE',
         paddingBottom: 20,
+        fontSize: 13,
     },
     button: {
-        margin: 20,
+        margin: 0,
+        paddingTop: 70,
         borderRadius: 50,
-        backgroundColor: '#5DB075',
+        backgroundColor: '#31A672',
         fontFamily: "Inter", // get font later!!
         width: 250,
         fontWeight: 'bold',
