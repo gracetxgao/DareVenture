@@ -3,7 +3,7 @@ import { Button } from 'react-native-elements';
 import { Image } from 'react-native';
 
 
-const Font = require('../assets/fonts/Poppins/Poppins-Bold.ttf');
+const Poppins = require('../assets/fonts/Poppins/Poppins-Bold.ttf');
 const Logo = require('../assets/DareVentureLogo.png');
 
 const OpeningScreen = ({ navigation }) => {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         paddingTop: 30,
         fontSize: 30,
         paddingBottom: 20,
-        fontFamily: "Verdana", // fix font later!!!
+        fontFamily: 'Verdana', // fix font later!!!
         fontWeight: 'bold',
     },
     button: {

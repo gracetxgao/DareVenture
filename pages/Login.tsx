@@ -4,24 +4,27 @@ import { Input } from 'react-native-elements';
 
 const LoginScreen = ({ navigation }) => {
     return (
-        <View>
-            <Text style={styles.text}>Log In</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Log In</Text>
+            
             <Input
+                style={styles.input}
                 placeholder='Email'
             />
             <Input
+                style={styles.input}
                 placeholder='Password'
             />
             <Button
                 buttonStyle ={styles.button}
-                title="login"
+                title="Log In"
                 onPress={() =>
                     navigation.navigate('Home')
                 }
             />
             <Button
                 buttonStyle ={styles.button}
-                title="create an account"
+                title="Create An Account"
                 onPress={() =>
                     navigation.navigate('Signup')
                 }
@@ -31,13 +34,30 @@ const LoginScreen = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-    text: {
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        
+    },
+
+    title: {
+        paddingBottom: 60,
+        paddingTop:30,
         fontSize: 45,
-        alignContent: "center",
-        justifyContent: 'center',
+        
     },
     button: {
-        backgroundColor: '#5DB075',
+        backgroundColor: '#31A672',
+        borderRadius: 50,
+        height: 50,
+        width:300,
+        marginTop: 30,
+    },
+    input: {
+        borderStyle: 'solid',
+        backgroundColor: '#F6F6F6',
+        borderColor: '#E8E8E8',
     }
 
 
