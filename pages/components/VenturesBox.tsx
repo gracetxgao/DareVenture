@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         borderWidth: 1,
-        borderColor: 'black',
+        borderColor: '#fff',
     },
 
 });
