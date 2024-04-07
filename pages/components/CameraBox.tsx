@@ -27,10 +27,7 @@ const CameraBox = () => {
                     style={styles.image} />
                 <Text>attach photo</Text>
             </TouchableOpacity>
-            <Button buttonStyle={styles.button}
-                title="post your venture"
-                // onPress={() => }
-            />
+            
         </View>
         
     )
@@ -38,20 +35,18 @@ const CameraBox = () => {
 
 const styles = StyleSheet.create({
     container: {
+        width: 350, 
+        height: 150,
+        borderRadius: 20,
         flexDirection: 'column',
         borderWidth: 1,
         borderColor: 'black',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     image: {
       width: 100, 
       height: 100,
-    },
-    button: {
-        margin: 20,
-        borderRadius: 50,
-        backgroundColor: '#5DB075',
-        fontFamily: "Inter", // get font later!!
-        width: 250,
     },
 });
 

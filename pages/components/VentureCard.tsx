@@ -31,8 +31,12 @@ const styles = StyleSheet.create({
         borderColor: 'black'
     },
     image: {
-      width: 200, 
-      height: 200,
+      marginLeft: 10,
+      marginRight: 10,
+      marginTop: 10,
+      width: 175, 
+      height: 125,
+      borderRadius: 20,
     },
 });
 
