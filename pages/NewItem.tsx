@@ -15,7 +15,7 @@ const NewItemPage = ({ navigation }) => {
           <Text>100% off</Text>
       </View>
       <Button buttonStyle={styles.button}
-            title="purchase online"
+            title="redeem"
             onPress={() =>
                 navigation.navigate('RedeemedItemPage')
             }
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
   descriptionRight: {
     justifyContent: 'flex-end',
     alignItems: 'center',
-    backgroundColor: 'orange',
     borderRadius: 10
   },
   barcode: {
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
   button: {
     margin: 20,
     borderRadius: 50,
-    backgroundColor: 'orange',
+    backgroundColor: 'green',
     fontFamily: "Inter", // get font later!!
     width: 150,
 },

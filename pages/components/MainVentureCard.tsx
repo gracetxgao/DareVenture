@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button, Image } from 'react-native-elements';
 
-const MainVentureCard = () => {
+const MainVentureCard = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View>
@@ -14,9 +14,11 @@ const MainVentureCard = () => {
         <Text style={styles.title}>Time to Touch Grass</Text>
         <Text style={styles.ventureDes}>Have you been sitting by the desk all day? Take a short break away from your device by going outside to touch some grass! Whether you play some spike ball, go on a walk, or just enjoy some time lying on the grass, take a picture and share with the DareVenture community.</Text>
         <Button
-                buttonStyle ={styles.button}
-                title="Venture Now"
-            />
+          title="venture now"
+          onPress={() =>
+            navigation.navigate('VenturePage')
+        }
+        />
       </View>
     </View>
   );

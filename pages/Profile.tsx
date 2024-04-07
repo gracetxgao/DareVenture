@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import ProductsBox from "./components/ProductsBox";
 import VenturePoints from "./components/VenturePointsBubble";
+import { Button } from 'react-native-elements';
 
 const CurrentStreak = () => {
     return (
@@ -22,7 +23,7 @@ const VenturesCompleted = () => {
     )
 }
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text>name</Text>
@@ -34,6 +35,12 @@ const ProfileScreen = () => {
                 <View style={styles.pointsRight}>
                     <CurrentStreak />
                     <VenturesCompleted />
+                    <Button
+                        title="venture gallery"
+                        onPress={() =>
+                            navigation.navigate('VentureGallery')
+                        }
+                    />
                 </View>
             </View>
             <View>
