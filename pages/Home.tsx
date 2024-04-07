@@ -22,12 +22,14 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         justifyContent: 'flex-start',
         backgroundColor: '#fff',
+    
     },
     title: {
         fontSize: 25,
         fontWeight: 'bold',
         paddingBottom: 10,
         paddingTop:10,
+        marginLeft: 15,
     }
 });
 
