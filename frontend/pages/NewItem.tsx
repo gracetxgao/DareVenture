@@ -12,7 +12,7 @@ const NewItemPage = ({ navigation }) => {
       <View style={styles.description}>
           <Text style={styles.productTitle}>Atom Hoody Women's</Text>
           <Text style={styles.productDesc}>Arc'Teryx</Text>
-          <Text style={styles.productDesc}>1500 points for 25% off</Text>
+          <Text style={styles.productDesc}>2000 points for 20% off</Text>
       </View>
       <Button buttonStyle={styles.button}
             title="Redeem"
