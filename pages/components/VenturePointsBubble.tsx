@@ -41,9 +41,15 @@ const styles = StyleSheet.create({
         paddingTop: 5,
     },
     points: {
-        fontSize: 11,
-        marginBottom: 30,
-        color: "white",
+        color: '#32A366',
+        fontSize: 60,
+        textAlign: 'center',
+        fontWeight: 'bold',
+    },
+    text: {
+        color: '#32A366',
+        fontSize: 10,
+        textAlign: 'center',
         fontWeight: 'bold',
     }
 })

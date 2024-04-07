@@ -20,10 +20,10 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="Rewards" component={RewardsScreen} />
-    <Tab.Screen name="Achievements" component={AchievementsScreen} />
-    <Tab.Screen name="Profile" component={ProfileScreen} />
+    <Tab.Screen name=" " component={HomeScreen} options={{ headerShown: false }}/>
+    <Tab.Screen name="Rewards" component={RewardsScreen} options={{ headerShown: false }}/>
+    <Tab.Screen name="Achievements" component={AchievementsScreen} options={{ headerShown: false }} />
+    <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>
   </Tab.Navigator>
 );
 

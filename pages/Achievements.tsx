@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
-import VenturePoints from "./components/VenturePointsBubble";
+import VenturePointsEarned from "./components/VenturePointsEarnedBubble";
 import ProductCard from "./components/ProductCard";
 
 const AchievementsScreen = () => {
@@ -7,7 +7,7 @@ const AchievementsScreen = () => {
         <View style={styles.container}>
             <Text style={styles.title}>CONGRATULATIONS</Text>
             <Text style={styles.text}>You have earned</Text>
-            <VenturePoints />
+            <VenturePointsEarned />
             <View style={styles.textContainer}>
                 <Text style={styles.text}>Only 150 Points Away From Redeeming</Text>
            </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         fontSize: 35,
         color:"#fff",
         fontWeight: 'bold',
-        paddingTop: 10,
+        paddingTop: 25,
     },
     textContainer: {
         width: 250,
