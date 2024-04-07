@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const VentureCard = ({ title }) => {
+const VentureCard = ({ title, image, desc }) => {
   const navigation = useNavigation();
 
   const handleCardPress = () => {
@@ -13,12 +13,12 @@ const VentureCard = ({ title }) => {
     <TouchableOpacity onPress={handleCardPress} style={styles.container}>
       <View>
         <Image 
-          source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/330px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'}}
-          style={styles.image} />
+          source={{uri: image}}
+            style={styles.image} />
       </View>
-      <View>
-        <Text>{title}</Text>
-        <Text>venture description</Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>{title}</Text>
+        <Text>{desc}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         borderWidth: 1,
-        borderColor: 'black'
+        borderColor: 'lightgrey',
+        borderRadius: 20,
+        marginLeft:10,
     },
     image: {
       marginLeft: 10,
@@ -38,6 +40,15 @@ const styles = StyleSheet.create({
       height: 125,
       borderRadius: 25,
     },
+    textContainer: {
+      paddingLeft: 10,
+      paddingTop: 5,
+    },
+    title: {
+      fontSize: 15,
+      fontWeight: 'bold',
+      flexWrap: 'wrap',
+    }
 });
 
 export default VentureCard;

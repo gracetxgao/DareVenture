@@ -2,11 +2,11 @@ import VentureCard from "./VentureCard"
 import { View, StyleSheet, ScrollView } from 'react-native';
 
 interface VenturesBoxTypes {
-    cards: Array<String>
+    cards: Array<Array<String>>
 }
 
 const VenturesBox = ({ cards }: VenturesBoxTypes) => {
-    const VentureCards = cards.map((card, index) => <VentureCard key={index} title={card}/>)
+    const VentureCards = cards.map((card, index) => <VentureCard key={index} title={card[0]} image={card[1]} desc={card[2]}/>)
 
     return (
         <ScrollView horizontal={true} style={styles.container}>
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         borderWidth: 1,
-        borderColor: 'black',
+        borderColor: '#fff',
     },
 
 });
