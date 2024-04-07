@@ -13,7 +13,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import RedeemedItemPage from './pages/RedeemedItem';
 import NewItemPage from './pages/NewItem';
 import VenturePage from './pages/Venture';
-import VentureGallery from './pages/VentureGallery';
+import VentureGallery from './VentureGallery';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -97,3 +97,4 @@ export default function App() {
       <MyStack />
   )
 };
+
