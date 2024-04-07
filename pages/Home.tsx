@@ -22,9 +22,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     title: {
-        fontSize: 25,
+        fontSize: 45,
         fontWeight: 'bold',
-        paddingBottom: 20,
+        paddingBottom: 10,
+        paddingTop:10,
     }
 });
 

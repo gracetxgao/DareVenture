@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     },
     image: {
       marginLeft: 10,
+      marginRight: 10,
       marginTop: 10,
       width: 175, 
       height: 200,
@@ -53,14 +54,12 @@ const styles = StyleSheet.create({
     },
     title: {
       marginTop: 10,
-      marginLeft: 10,
       fontWeight: 'bold',
       fontSize: 25,
       flexWrap: 'wrap',
     },
     ventureDes: {
       color:'#AEAEAE',
-      marginLeft: 10,
     }
 });
 
