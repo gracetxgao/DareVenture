@@ -10,12 +10,12 @@ const NewItemPage = ({ navigation }) => {
               style={styles.productImage} />
       </View>
       <View style={styles.description}>
-          <Text>Atom Hoody Women's</Text>
-          <Text>Arc'Teryx</Text>
-          <Text>20% off</Text>
+          <Text style={styles.productTitle}>Atom Hoody Women's</Text>
+          <Text style={styles.productDesc}>Arc'Teryx</Text>
+          <Text style={styles.productDesc}>1500 points for 25% off</Text>
       </View>
       <Button buttonStyle={styles.button}
-            title="redeem"
+            title="Redeem"
             onPress={() =>
                 navigation.navigate('RedeemedItemPage')
             }
@@ -28,10 +28,13 @@ const styles = StyleSheet.create({
   container: {
       flex: 1,
       flexDirection:'column',
+      margin: 50,
+      paddingTop: 30,
   },
   productImage: {
-    width: 400, 
-    height: 600,
+    width: 300, 
+    height: 400,
+    borderRadius: 15,
   },
   description: {
     flexDirection: 'column',
@@ -49,12 +52,33 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   button: {
-    margin: 20,
+    marginTop: 40,
     borderRadius: 50,
-    backgroundColor: 'green',
+    backgroundColor: '#5DB075',
     fontFamily: "Inter", // get font later!!
-    width: 150,
-},
+    width: 250,
+    fontWeight: 'bold',
+
+    shadowColor: "#000000",
+    shadowOpacity: 0.17,
+    shadowRadius: 3,
+    shadowOffset: {
+      height: 2,
+      width: 2
+    },
+    marginLeft: 10,
+  },
+  productTitle: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginTop: 20,
+  },
+  productDesc: {
+    fontSize: 15,
+    //fontWeight: 'bold',
+    marginTop: 10,
+    color: '#ACACAC',
+  }
 });
 
 export default NewItemPage;
