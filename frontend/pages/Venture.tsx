@@ -18,11 +18,14 @@ const VenturePage = () => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
-        borderWidth: 1,
-        borderColor: 'black',
+        //borderWidth: 1,
+        //borderColor: 'black',
         alignItems: 'center',
         backgroundColor: '#fff',
-        paddingTop:50,
+        paddingTop: 60,
+        paddingLeft: 40,
+        paddingRight: 40,
+        paddingBottom: 170,
     },
     image: {
       width: 350, 

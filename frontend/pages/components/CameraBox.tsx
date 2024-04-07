@@ -44,7 +44,7 @@ const CameraBox = () => {
                         <Image 
                             source={{uri: 'https://t4.ftcdn.net/jpg/01/07/57/91/360_F_107579101_QVlTG43Fwg9Q6ggwF436MPIBTVpaKKtb.jpg'}}
                             style={styles.image} />
-                        <Text>attach photo</Text>
+                        <Text>Attach Photo</Text>
                     </TouchableOpacity>
                 )}
             </TouchableOpacity>
@@ -66,13 +66,15 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 20,
     },
     image: {
       width: 100, 
       height: 100,
+      marginTop: 80,
     },
     button: {
-        margin: 20,
+        marginTop: 40,
         borderRadius: 50,
         backgroundColor: '#5DB075',
         fontFamily: "Inter", // get font later!!

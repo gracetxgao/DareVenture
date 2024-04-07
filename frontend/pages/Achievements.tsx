@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#32A366',
         alignItems: 'center',
-        paddingTop:50,
+        paddingTop:75,
     },
     title: {
         fontSize: 35,
