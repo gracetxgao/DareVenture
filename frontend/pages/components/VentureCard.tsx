@@ -31,13 +31,15 @@ const styles = StyleSheet.create({
         borderColor: 'lightgrey',
         borderRadius: 20,
         marginLeft:10,
+        height: 210,
+        marginTop: 20,
     },
     image: {
       marginLeft: 10,
       marginRight: 10,
       marginTop: 10,
       width: 180, 
-      height: 155,
+      height: 140,
       borderRadius: 15,
     },
     textContainer: {

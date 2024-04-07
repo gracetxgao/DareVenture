@@ -33,7 +33,7 @@ const SignupScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop:50,
+        paddingTop:100,
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#fff',

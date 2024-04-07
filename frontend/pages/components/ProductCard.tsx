@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         marginLeft:5,
         flexDirection: 'column',
         borderWidth: 1,
-        width: 150, 
+        width: 160, 
         height: 230,
         alignItems: 'center',
         borderRadius: 20,
@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     },
     image: {
       marginTop: 8,
-      width: 130, 
-      height: 120,
+      width: 140, 
+      height: 150,
       borderRadius: 20,
      
     },
@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
       fontSize: 13,
       fontWeight: 'bold',
       marginTop: 5,
-      marginLeft:-5,
+      marginLeft:5,
     },
     text: {
       paddingTop: 2,
       color: '#AEAEAE',
       fontSize: 9,
-      marginLeft:-5,
+      marginLeft:5,
     }
 });
 

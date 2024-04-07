@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
         margin: 20,
         borderRadius: 50,
         backgroundColor: '#5DB075',
-        fontFamily: "Inter", // get font later!!
         width: 150,
     },
     logo: {

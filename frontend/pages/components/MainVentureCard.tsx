@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         //borderWidth: 1,
         //borderColor: '#fff',
         paddingRight: 10,
+        paddingLeft: 10,
     },
     ventureContainer: { 
       flex:1,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
       }
     },
     buttonTitle: {
-      fontSize: 14,
+      fontSize: 16,
       color: "white",
       fontWeight: 'bold',
     },
@@ -75,8 +76,7 @@ const styles = StyleSheet.create({
     },
     ventureDes: {
       color:'#AEAEAE',
-      fontSize: 10.5,
-      fontWeight: 'bold',
+      fontSize: 13,
       marginTop: 15,
       marginBottom: 2,
     }

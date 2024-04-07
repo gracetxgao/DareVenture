@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
         paddingBottom:20,
         borderRadius:20,
         alignItems: 'center',
+
         
     },
     image: {
