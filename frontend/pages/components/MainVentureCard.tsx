@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
         //borderColor: '#fff',
         paddingRight: 10,
         paddingLeft: 10,
-        paddingBottom: 20
     },
     ventureContainer: { 
       flex:1,
