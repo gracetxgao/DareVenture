@@ -34,47 +34,58 @@ const MyStack = () => {
         <Stack.Screen
           name="Opening"
           component={OpeningScreen}
-          options={{title: 'opening screen'}}
+          options={{ headerShown: false }} 
+          
         />
         <Stack.Screen 
           name="Signup" 
           component={SignupScreen} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="Login" 
           component={LoginScreen} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="Home" 
           component={BottomTabNavigator} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="Rewards" 
           component={BottomTabNavigator} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="Profile" 
           component={BottomTabNavigator} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="Achievements" 
           component={BottomTabNavigator} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="RedeemedItemPage" 
           component={RedeemedItemPage} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="NewItemPage" 
           component={NewItemPage} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="VenturePage" 
           component={VenturePage} 
+          options={{ headerShown: false }} 
         />
         <Stack.Screen 
           name="VentureGallery" 
           component={VentureGallery} 
+          options={{ headerShown: false }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
