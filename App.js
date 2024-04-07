@@ -12,6 +12,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import RedeemedItemPage from './pages/RedeemedItem';
 import NewItemPage from './pages/NewItem';
+import VenturePage from './pages/Venture';
+import VentureGallery from './pages/VentureGallery';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -65,6 +67,14 @@ const MyStack = () => {
         <Stack.Screen 
           name="NewItemPage" 
           component={NewItemPage} 
+        />
+        <Stack.Screen 
+          name="VenturePage" 
+          component={VenturePage} 
+        />
+        <Stack.Screen 
+          name="VentureGallery" 
+          component={VentureGallery} 
         />
       </Stack.Navigator>
     </NavigationContainer>

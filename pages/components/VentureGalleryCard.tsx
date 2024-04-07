@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Button } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
-const MainVentureCard = ({ navigation }) => {
+const VentureGalleryCard = ({ title }) => {
+
   return (
     <View style={styles.container}>
       <View>
@@ -10,14 +11,8 @@ const MainVentureCard = ({ navigation }) => {
           style={styles.image} />
       </View>
       <View>
-        <Text>title text</Text>
-        <Text>description text</Text>
-        <Button
-          title="venture now"
-          onPress={() =>
-            navigation.navigate('VenturePage')
-        }
-        />
+        <Text>{title}</Text>
+        <Text>completed on ...</Text>
       </View>
     </View>
   );
@@ -25,14 +20,14 @@ const MainVentureCard = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         borderWidth: 1,
-        borderColor: 'black',
+        borderColor: 'black'
     },
     image: {
       width: 200, 
-      height: 200
+      height: 200,
     },
 });
 
-export default MainVentureCard;
+export default VentureGalleryCard;

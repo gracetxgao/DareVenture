@@ -24,7 +24,7 @@ const RedeemedItemPage = ({ navigation }) => {
           <Image source={{uri: 'https://cdn-dfhjh.nitrocdn.com/BzQnABYFnLkAUVnIDRwDtFjmHEaLtdtL/assets/images/optimized/rev-ecb332d/www.gtin.info/wp-content/uploads/2015/02/barcode-3.png'}}
               style={styles.barcodeImage} />
           <Button buttonStyle={styles.button}
-                title="redeem"
+                title="purchase online"
                 onPress={() =>
                     navigation.navigate('RedeemedItemPage')
                 }
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   button: {
     margin: 20,
     borderRadius: 50,
-    backgroundColor: '#5DB075',
+    backgroundColor: 'orange',
     fontFamily: "Inter", // get font later!!
     width: 150,
 },
