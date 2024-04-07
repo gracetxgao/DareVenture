@@ -14,16 +14,42 @@ import RedeemedItemPage from './pages/RedeemedItem';
 import NewItemPage from './pages/NewItem';
 import VenturePage from './pages/Venture';
 import VentureGallery from './pages/VentureGallery';
+import Icon from 'react-native-vector-icons/Entypo';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+
 const BottomTabNavigator = () => (
-  <Tab.Navigator>
-    <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
-    <Tab.Screen name="Rewards" component={RewardsScreen} options={{ headerShown: false }}/>
+  <Tab.Navigator
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ color, size }) => {
+        let iconName;
+
+        // Set the appropriate icon based on the route name
+        if (route.name === 'Home') {
+          iconName = 'home';
+        } else if (route.name === 'Rewards') {
+          iconName = 'trophy';
+        } else if (route.name === 'Achievements') {
+          iconName = 'medal';
+        } else if (route.name === 'Profile') {
+          iconName = 'user';
+        }
+
+        // Return the icon component
+        return <Icon name={iconName} size={size} color={color} />;
+      },
+    })}
+    tabBarOptions={{
+      activeTintColor: 'tomato',
+      inactiveTintColor: 'gray',
+    }}
+  >
+    <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+    <Tab.Screen name="Rewards" component={RewardsScreen} options={{ headerShown: false }} />
     <Tab.Screen name="Achievements" component={AchievementsScreen} options={{ headerShown: false }} />
-    <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>
+    <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
   </Tab.Navigator>
 );
 

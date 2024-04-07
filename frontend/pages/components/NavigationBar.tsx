@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../Home';
+import Icon from 'react-native-vector-icons/Entypo';
 
 const Tab = createBottomTabNavigator();
 
