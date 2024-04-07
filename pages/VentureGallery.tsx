@@ -5,8 +5,8 @@ const VentureGallery = () => {
     return (
         <View>
             <Text>venture gallery</Text>
-            <VentureGalleryCard title={"go on a hike"}/>
-            <VentureGalleryCard title={"cloudgazing"}/>
+            <VentureGalleryCard title={"Go on a Hike"}/>
+            <VentureGalleryCard title={"Cloudgazing"}/>
         </View>
     )
 }

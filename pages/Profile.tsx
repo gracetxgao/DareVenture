@@ -48,11 +48,11 @@ const ProfileScreen = ({ navigation }) => {
             </View>
             <View>
                 <Text style={styles.componentTitle}>Your Venture Wishlist</Text>
-                <ProductsBox cards={["first", "second", "third"]} redeemed={false}/>
+                <ProductsBox cards={[["first", "second", "third"]]} redeemed={false}/>
             </View>
             <View>
                 <Text style={styles.componentTitle}>Redeemed Items</Text>
-                <ProductsBox cards={["first", "second", "third"]} redeemed={true}/>
+                <ProductsBox cards={[["first", "second", "third"]]} redeemed={true}/>
             </View>
         </View>
     )
@@ -61,6 +61,7 @@ const ProfileScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
+        paddingTop: 50,
         //borderWidth: 1,
         //borderColor: 'black',
         padding: 10,
