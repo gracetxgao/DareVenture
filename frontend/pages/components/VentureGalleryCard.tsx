@@ -22,10 +22,15 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         borderWidth: 1,
-        borderColor: 'black'
+        borderColor: 'lightgrey',
+        marginTop: 20,
+        marginBottom: 20,
+        paddingBottom:20,
+        borderRadius:20,
         
     },
     image: {
+      borderRadius:20,
       width: 400, 
       height: 200,
     },
