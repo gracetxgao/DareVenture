@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-const VentureCard = () => {
+const VentureCard = ({ title }) => {
   return (
     <View style={styles.container}>
       <View>
@@ -9,7 +9,7 @@ const VentureCard = () => {
               style={styles.image} />
       </View>
       <View>
-        <Text>venture title</Text>
+        <Text>{title}</Text>
         <Text>venture description</Text>
       </View>
     </View>
@@ -18,12 +18,13 @@ const VentureCard = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        flexDirection: 'column'
+        flexDirection: 'column',
+        borderWidth: 1,
+        borderColor: 'black'
     },
     image: {
-      width: 100, 
-      height: 100
+      width: 200, 
+      height: 200,
     },
 });
 
