@@ -21,13 +21,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black',
     },
-    image: {
-        marginLeft: 10,
-        marginTop: 10,
-        width: 175, 
-        height: 200,
-        borderRadius: 20,
-      },
+
 });
 
 export default VenturesBox;
