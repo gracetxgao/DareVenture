@@ -18,7 +18,7 @@ const VentureCard = ({ title, image, desc }) => {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
-        <Text>{desc}</Text>
+        <Text style={styles.desc}>{desc}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
       marginLeft: 10,
       marginRight: 10,
       marginTop: 10,
-      width: 175, 
-      height: 125,
-      borderRadius: 25,
+      width: 180, 
+      height: 155,
+      borderRadius: 15,
     },
     textContainer: {
       paddingLeft: 10,
@@ -48,6 +48,12 @@ const styles = StyleSheet.create({
       fontSize: 15,
       fontWeight: 'bold',
       flexWrap: 'wrap',
+      paddingTop: 5,
+      paddingBottom: 5,
+    },
+    desc: {
+      color: '#ACACAC',
+      fontSize: 12,
     }
 });
 
