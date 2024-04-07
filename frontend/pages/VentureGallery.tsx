@@ -30,17 +30,19 @@ const VentureGallery = () => {
     
     const ventureGalleryCards = ventures.map((v, index) => {
         let imageSource;
-        if (v.image && (v.image.startsWith('http') === false)) {
-            imageSource = `data:image/jpg;base64,${v.image}`
-        } else {
-            imageSource = v.image;
+        if (v.image) {
+            if (v.image.startsWith('http') === true) {
+                imageSource = v.image;
+            } else {
+                imageSource = `data:image/jpg;base64,${v.image}`
+            }
         }
         
         return (
           <VentureGalleryCard
             key={index}
             title={v.title}
-            image={imageSource}
+            image={v.image}
             date={v.date}
           />
         );
