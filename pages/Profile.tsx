@@ -37,8 +37,9 @@ const ProfileScreen = ({ navigation }) => {
                     <CurrentStreak />
                     <VenturesCompleted />
                     <Button
-                        style={styles.button}
+                        buttonStyle={styles.button}
                         title="venture gallery"
+                        titleStyle={styles.buttonTitle}
                         onPress={() =>
                             navigation.navigate('VentureGallery')
                         }
@@ -60,39 +61,57 @@ const ProfileScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
-        borderWidth: 1,
-        borderColor: 'black',
-        padding: 10
+        //borderWidth: 1,
+        //borderColor: 'black',
+        padding: 10,
+        backgroundColor: 'white',
+        
     },
     points: {
         flexDirection: 'row',
-        borderWidth: 1,
-        borderColor: 'black',
-        marginBottom: 10,
+        //borderWidth: 1,
+        //borderColor: 'black',
+        marginBottom: 2,
         
     },
     pointsRight: {
         flexDirection: 'column',
-        borderWidth: 1,
-        borderColor: 'black',
-        padding: 10,
+        //borderWidth: 1,
+        //borderColor: 'black',
+        paddingRight: 8,
+        paddingLeft: 8,
         borderRadius: 10,
+        
+        
     },
     pointsLeft: {
         flexDirection: 'column',
-        borderWidth: 1,
-        borderColor: 'black',
-        padding: 10,
+        //borderWidth: 1,
+        //borderColor: 'black',
+        paddingLeft: 12,
+        paddingRight: 20,
         borderRadius: 10,
     },
     sideBox: {
-        padding: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingTop: 8,
+        paddingBottom: 8,
         borderRadius: 10,
-        borderWidth: 1,
-        borderColor: 'black',
+        // borderWidth: 1,
+        //borderColor: 'black',
         alignSelf: 'flex-end',
         alignItems: 'center',
         margin: 2,
+        marginRight: 10,
+
+        shadowColor: "#000000",
+        shadowOpacity: 0.17,
+        shadowRadius: 3,
+        shadowOffset: {
+          height: 1,
+          width: 1
+        }
     },
     name: {
         fontSize: 30,
@@ -107,23 +126,36 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     sideBoxNumber: {
-        fontSize: 22,
+        fontSize: 25,
         fontWeight: 'bold',
         color: '#0D4803',
     },
-    button: {
-        fontSize: 10,
-        backgroundColor: '#31A672',
-        borderRadius: 50,
-        height: 40,
-        width:140,
-        marginTop: 10,
-        marginBottom: 10,
-        marginLeft: 10,
-    },
     sideBoxSubText: {
-        fontSize: 5,
-    }
+        fontSize: 9,
+    },
+    button: {
+        backgroundColor: 'white',
+        borderRadius: 10,
+        height: 35,
+        width: 140,
+        marginTop: 2,
+        marginBottom: 2,
+        marginLeft: 10,
+        marginRight: 8,
+        shadowColor: "#000000",
+        shadowOpacity: 0.17,
+        shadowRadius: 3,
+        shadowOffset: {
+          height: 1,
+          width: 1
+        }
+    },
+    buttonTitle: {
+        fontSize: 12,
+        color: "black",
+        fontWeight: 'bold',
+        
+    },
 });
 
 export default ProfileScreen;

@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#32A366',
         padding: 10,
         borderRadius: 100,
-        margin: 15,
-        //marginTop: 10,
+        margin: 10,
+        marginTop: 10,
         
         alignItems: 'center',
 
@@ -34,24 +34,20 @@ const styles = StyleSheet.create({
         color: "white",
         fontWeight: 'bold',
         //borderRadius: 100,
-        marginTop: 20,
-        marginLeft: 10,
-        marginRight: 10,
+        marginTop: 15,
+        marginLeft: 0,
+        marginRight: 0,
 
         paddingTop: 5,
     },
     points: {
-        color: '#32A366',
-        fontSize: 60,
+        color: "white",
+        fontSize: 11,
         textAlign: 'center',
         fontWeight: 'bold',
+        marginBottom: 30,
+
     },
-    text: {
-        color: '#32A366',
-        fontSize: 10,
-        textAlign: 'center',
-        fontWeight: 'bold',
-    }
 })
 
 export default VenturePoints
