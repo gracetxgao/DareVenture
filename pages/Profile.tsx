@@ -1,14 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import ProductsBox from "./components/ProductsBox";
-
-const VenturePoints = () => {
-    return (
-        <View>
-            <Text>number</Text>
-            <Text>venture points</Text>
-        </View>
-    )
-}
+import VenturePoints from "./components/VenturePointsBubble";
 
 const CurrentStreak = () => {
     return (
@@ -36,7 +28,7 @@ const ProfileScreen = () => {
             <Text>name</Text>
             <Text>username</Text>
             <View style={styles.points}>
-                <View style={styles.pointsLeft}>
+                <View>
                     <VenturePoints />
                 </View>
                 <View style={styles.pointsRight}>
@@ -46,7 +38,11 @@ const ProfileScreen = () => {
             </View>
             <View>
                 <Text>your venture wishlist</Text>
-                <ProductsBox cards={["first", "second", "third"]}/>
+                <ProductsBox cards={["first", "second", "third"]} redeemed={false}/>
+            </View>
+            <View>
+                <Text>redeemed venture items</Text>
+                <ProductsBox cards={["first", "second", "third"]} redeemed={true}/>
             </View>
         </View>
     )
@@ -65,12 +61,6 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         marginBottom: 10,
         
-    },
-    pointsLeft: {
-        backgroundColor: 'green',
-        padding: 10,
-        borderRadius: 100,
-        margin: 20,
     },
     pointsRight: {
         flexDirection: 'column',

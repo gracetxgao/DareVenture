@@ -1,9 +1,13 @@
-import { View, Text } from "react-native"
+import { View, Text } from "react-native";
+import ProductsBox from "./components/ProductsBox";
 
 const RewardsScreen = () => {
     return (
         <View>
-            <Text>rewards screen</Text>
+            <Text>recommended</Text>
+            <ProductsBox cards={["haha", "adfsdf", "afdsfasf"]} redeemed={false}/>
+            <Text>wishlist</Text>
+            <ProductsBox cards={["haha", "adfsdf", "afdsfasf"]} redeemed={false}/>
         </View>
     )
 }

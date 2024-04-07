@@ -9,8 +9,9 @@ import AchievementsScreen from './pages/Achievements';
 import ProfileScreen from './pages/Profile';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; // Import createBottomTabNavigator
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import RedeemedItemPage from './pages/RedeemedItem';
+import NewItemPage from './pages/NewItem';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -56,6 +57,14 @@ const MyStack = () => {
         <Stack.Screen 
           name="Achievements" 
           component={BottomTabNavigator} 
+        />
+        <Stack.Screen 
+          name="RedeemedItemPage" 
+          component={RedeemedItemPage} 
+        />
+        <Stack.Screen 
+          name="NewItemPage" 
+          component={NewItemPage} 
         />
       </Stack.Navigator>
     </NavigationContainer>

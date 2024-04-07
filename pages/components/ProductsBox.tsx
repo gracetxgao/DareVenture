@@ -3,10 +3,11 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 
 interface ProductsBoxTypes {
     cards: Array<String>
+    redeemed: Boolean
 }
 
-const ProductsBox = ({ cards }: ProductsBoxTypes) => {
-    const ProductCards = cards.map((card, index) => <ProductCard key={index} title={card}/>)
+const ProductsBox = ({ cards, redeemed }: ProductsBoxTypes) => {
+    const ProductCards = cards.map((card, index) => <ProductCard key={index} title={card} redeemed={redeemed}/>)
 
     return (
         <ScrollView horizontal={true} style={styles.container}>
