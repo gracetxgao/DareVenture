@@ -14,6 +14,7 @@ import RedeemedItemPage from './pages/RedeemedItem';
 import NewItemPage from './pages/NewItem';
 import VenturePage from './pages/Venture';
 import VentureGallery from './pages/VentureGallery';
+import Icon from 'react-native-vector-icons';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -23,7 +24,7 @@ const BottomTabNavigator = () => (
     <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
     <Tab.Screen name="Rewards" component={RewardsScreen} options={{ headerShown: false }}/>
     <Tab.Screen name="Achievements" component={AchievementsScreen} options={{ headerShown: false }} />
-    <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>
+    <Tab.Screen  name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>
   </Tab.Navigator>
 );
 
