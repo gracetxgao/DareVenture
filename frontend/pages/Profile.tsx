@@ -38,7 +38,7 @@ const ProfileScreen = ({ navigation }) => {
                     <VenturesCompleted />
                     <Button
                         buttonStyle={styles.button}
-                        title="venture gallery"
+                        title="Venture Gallery"
                         titleStyle={styles.buttonTitle}
                         onPress={() =>
                             navigation.navigate('VentureGallery')
