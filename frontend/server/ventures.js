@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = process.env.MONGODB_URI
+const baseUrl = '/api/images'
 
 const getAll = () => {
     const request = axios.get(baseUrl)
