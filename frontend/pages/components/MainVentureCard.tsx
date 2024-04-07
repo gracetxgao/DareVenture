@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     },
     ventureContainer: { 
       flex:1
-      
     },
     image: {
       marginLeft: 10,
@@ -51,6 +50,8 @@ const styles = StyleSheet.create({
       marginTop: 10,
       marginBottom: 10,
       marginLeft: 10,
+      fontWeight: 'bold',
+      
     },
     title: {
       marginTop: 10,
