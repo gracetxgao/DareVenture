@@ -20,7 +20,7 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => (
   <Tab.Navigator>
-    <Tab.Screen name=" " component={HomeScreen} options={{ headerShown: false }}/>
+    <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
     <Tab.Screen name="Rewards" component={RewardsScreen} options={{ headerShown: false }}/>
     <Tab.Screen name="Achievements" component={AchievementsScreen} options={{ headerShown: false }} />
     <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>

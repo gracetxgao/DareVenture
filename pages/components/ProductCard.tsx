@@ -34,28 +34,29 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         borderWidth: 1,
-        width: 230, 
-        height: 300,
+        width: 160, 
+        height: 220,
         alignItems: 'center',
         borderRadius: 20,
         backgroundColor: '#fff',
-        borderColor: '#fff'
+        //borderColor: 'black',
+        marginRight: 5,
     },
     image: {
-      marginTop:15,
-      width: 200, 
-      height: 200,
+      marginTop: 8,
+      width: 135, 
+      height: 140,
       borderRadius: 20,
     },
     item: {
-      fontSize: 17,
+      fontSize: 12,
       fontWeight: 'bold',
-      marginTop: 10,
+      marginTop: 8,
     },
     text: {
       paddingTop:2,
       color: '#AEAEAE',
-      fontSize: 13,
+      fontSize: 10,
     }
 });
 

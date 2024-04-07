@@ -19,8 +19,15 @@ const ProductsBox = ({ cards, redeemed }: ProductsBoxTypes) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        borderWidth: 1,
-        borderColor: 'black',
+        //borderWidth: 1,
+        //borderColor: 'black',
+        shadowColor: "#000000",
+        shadowOpacity: 0.17,
+        shadowRadius: 3,
+        shadowOffset: {
+          height: 1,
+          width: 1
+        }
     },
 });
 
