@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
     marginTop: 40,
     borderRadius: 50,
     backgroundColor: '#5DB075',
-    fontFamily: "Inter", // get font later!!
     width: 250,
     fontWeight: 'bold',
 
