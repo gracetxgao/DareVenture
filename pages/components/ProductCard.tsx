@@ -22,8 +22,9 @@ const ProductCard = ({ title, redeemed }) => {
               style={styles.image} />
       </View>
       <View>
-        <Text>{title}</Text>
-        <Text>description</Text>
+        <Text style={styles.item}>{title}</Text>
+        <Text style={styles.text}>Arc’Teryx</Text>
+        <Text style={styles.text}>2000 points for 20% off</Text>
       </View>
     </TouchableOpacity>
   );
@@ -33,12 +34,29 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         borderWidth: 1,
-        borderColor: 'black'
+        width: 230, 
+        height: 300,
+        alignItems: 'center',
+        borderRadius: 20,
+        backgroundColor: '#fff',
+        borderColor: '#fff'
     },
     image: {
+      marginTop:15,
       width: 200, 
       height: 200,
+      borderRadius: 20,
     },
+    item: {
+      fontSize: 17,
+      fontWeight: 'bold',
+      marginTop: 10,
+    },
+    text: {
+      paddingTop:2,
+      color: '#AEAEAE',
+      fontSize: 13,
+    }
 });
 
 export default ProductCard;
