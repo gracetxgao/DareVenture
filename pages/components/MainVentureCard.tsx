@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Button } from 'react-native';
 
-const MainVentureCard = () => {
+const MainVentureCard = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View>
@@ -14,6 +14,9 @@ const MainVentureCard = () => {
         <Text>description text</Text>
         <Button
           title="venture now"
+          onPress={() =>
+            navigation.navigate('VenturePage')
+        }
         />
       </View>
     </View>

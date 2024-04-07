@@ -1,18 +1,26 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const VentureCard = ({ title }) => {
+  const navigation = useNavigation();
+
+  const handleCardPress = () => {
+    navigation.navigate('VenturePage' as never);
+  };
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={handleCardPress} style={styles.container}>
       <View>
-        <Image source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/330px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'}}
-              style={styles.image} />
+        <Image 
+          source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/330px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'}}
+          style={styles.image} />
       </View>
       <View>
         <Text>{title}</Text>
         <Text>venture description</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
