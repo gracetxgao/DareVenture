@@ -9,6 +9,7 @@ const MainVentureCard = ({ navigation }) => {
         <Image 
           source={{uri: 'https://d131tjlifx1tzx.cloudfront.net/wp-content/uploads/2019/02/healthykids.jpg'}}
           style={styles.image} />
+          <Text style={styles.points}>50 points</Text>
       </View>
       <View style={styles.ventureContainer}>
         <Text style={styles.title}>Time to Touch Grass</Text>
@@ -33,6 +34,14 @@ const styles = StyleSheet.create({
         //borderColor: '#fff',
         paddingRight: 10,
         paddingLeft: 10,
+    },
+    points: {
+      fontWeight: 'bold',
+      fontSize: 15,
+      marginLeft: 50,
+      marginTop:20,
+      
+      
     },
     ventureContainer: { 
       flex:1,

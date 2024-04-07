@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height:25,
     width: 100,
-    backgroundColor: 'green',
+    backgroundColor: '#5DB075',
     borderRadius: 10,
     justifyContent: 'center',
   },
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 50,
     backgroundColor: 'orange',
-    fontFamily: "Inter", // get font later!!
     fontWeight: 'bold',
     width: 175,
   },
