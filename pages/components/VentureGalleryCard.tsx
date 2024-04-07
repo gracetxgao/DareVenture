@@ -1,18 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-const VentureGalleryCard = ({ title }) => {
+const VentureGalleryCard = ({ title, image, date }) => {
 
   return (
     <View style={styles.container}>
       <View>
         <Image 
-          source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/330px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'}}
+          source={{uri: image}}
           style={styles.image} />
       </View>
       <View>
         <Text>{title}</Text>
-        <Text>completed on ...</Text>
+        <Text>completed on {date}</Text>
       </View>
     </View>
   );
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         
     },
     image: {
-      width: 200, 
+      width: 400, 
       height: 200,
     },
 });

@@ -1,35 +1,58 @@
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import { Button } from 'react-native-elements';
+import vgcService from '../../server/ventures';
+import { useState } from 'react';
+import { Button } from "react-native-elements";
 
 const CameraBox = () => {
 
+    const [imageUri, setImageUri] = useState(null);
+
     const openCamera = async () => {
-        let permissionResult = await ImagePicker.requestCameraPermissionsAsync();
+        const permissionResult = await ImagePicker.requestCameraPermissionsAsync();
         if (permissionResult.granted === false) {
           alert('Permission to access camera is required!');
           return;
         }
-        let pickerResult = await ImagePicker.launchCameraAsync();
-        if (pickerResult.canceled === true) {
-          return;
-        }
-    
-        // Handle the image picked from the camera here
-      };
+        const result = await ImagePicker.launchCameraAsync();
 
+        console.log(`result is ${result}`);
+        
+        if (result.canceled === false) {
+            console.log(result.assets[0].uri);
+            setImageUri(result.assets[0].uri);
+        }
+    }
+
+    const handleUpload = async (imageUri) => {
+        try {
+            vgcService
+                .create(imageUri)
+            console.log('Image saved successfully to MongoDB');
+        } catch (error) {
+            console.error('Error saving image to MongoDB:', error);
+        }
+    };
       
     return (
-        <View  style={styles.container}>
+        <View style={styles.container}>
             <TouchableOpacity onPress={openCamera}>
-                <Image 
-                    source={{uri: 'https://t4.ftcdn.net/jpg/01/07/57/91/360_F_107579101_QVlTG43Fwg9Q6ggwF436MPIBTVpaKKtb.jpg'}}
-                    style={styles.image} />
-                <Text>attach photo</Text>
+                {imageUri ? (
+                    <Image source={{ uri: imageUri }} style={styles.image} />
+                ) : (
+                    <TouchableOpacity onPress={openCamera}>
+                        <Image 
+                            source={{uri: 'https://t4.ftcdn.net/jpg/01/07/57/91/360_F_107579101_QVlTG43Fwg9Q6ggwF436MPIBTVpaKKtb.jpg'}}
+                            style={styles.image} />
+                        <Text>attach photo</Text>
+                    </TouchableOpacity>
+                )}
             </TouchableOpacity>
-            
+            <Button buttonStyle={styles.button}
+                title="Post Your Venture"
+                onPress={handleUpload}
+            />
         </View>
-        
     )
 }
 
@@ -48,6 +71,14 @@ const styles = StyleSheet.create({
       width: 100, 
       height: 100,
     },
+    button: {
+        margin: 20,
+        borderRadius: 50,
+        backgroundColor: '#5DB075',
+        fontFamily: "Inter", // get font later!!
+        width: 250,
+        fontWeight: 'bold',
+    },
 });
 
-export default CameraBox
+export default CameraBox;

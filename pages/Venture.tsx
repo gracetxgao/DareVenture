@@ -11,10 +11,6 @@ const VenturePage = () => {
                 style={styles.image} />
             <Text style={styles.text}>Have you been sitting by the desk all day? Take a short break away from your device by going outside to touch some grass! Whether you play some spike ball, go on a walk, or just enjoy some time lying on the grass, take a picture and share with the DareVenture community.</Text>
             <CameraBox />
-            <Button buttonStyle={styles.button}
-                title="Post Your Venture"
-                // onPress={() => }
-            />
         </View>
     )
 }
