@@ -7,7 +7,7 @@ const MainVentureCard = ({ navigation }) => {
     <View style={styles.container}>
       <View>
         <Image 
-          source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/330px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'}}
+          source={{uri: 'https://d131tjlifx1tzx.cloudfront.net/wp-content/uploads/2019/02/healthykids.jpg'}}
           style={styles.image} />
       </View>
       <View style={styles.ventureContainer}>

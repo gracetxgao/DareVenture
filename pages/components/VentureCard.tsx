@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const VentureCard = ({ title }) => {
+const VentureCard = ({ title, image, desc }) => {
   const navigation = useNavigation();
 
   const handleCardPress = () => {
@@ -13,12 +13,12 @@ const VentureCard = ({ title }) => {
     <TouchableOpacity onPress={handleCardPress} style={styles.container}>
       <View>
         <Image 
-          source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/330px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'}}
-          style={styles.image} />
+          source={{uri: image}}
+            style={styles.image} />
       </View>
       <View>
         <Text>{title}</Text>
-        <Text>venture description</Text>
+        <Text>{desc}</Text>
       </View>
     </TouchableOpacity>
   );

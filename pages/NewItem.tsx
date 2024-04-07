@@ -10,9 +10,9 @@ const NewItemPage = ({ navigation }) => {
               style={styles.productImage} />
       </View>
       <View style={styles.description}>
-          <Text>mantis backpack</Text>
-          <Text>arcteryx</Text>
-          <Text>100% off</Text>
+          <Text>Atom Hoody Women's</Text>
+          <Text>Arc'Teryx</Text>
+          <Text>20% off</Text>
       </View>
       <Button buttonStyle={styles.button}
             title="redeem"
