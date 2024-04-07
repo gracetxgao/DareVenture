@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import VentureGalleryCard from "./components/VentureGalleryCard";
 import { useState, useEffect } from "react";
 import vgcService from '../server/ventures'
@@ -11,6 +11,7 @@ const VentureGallery = () => {
     
     const ventureGalleryCards = ventures.map((v, index) => (
         <VentureGalleryCard key={index} title={v[0]} image={v[1]} date={v[2]}/>
+        
     ));
 
     useEffect(() => {
@@ -26,16 +27,20 @@ const VentureGallery = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Venture Gallery</Text>
-            {ventureGalleryCards}
+            <ScrollView horizontal={false} style={styles.container}>
+                {ventureGalleryCards}
+            </ScrollView>
+            
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 100,
+        paddingTop: 20,
     },
     title: {
+        marginTop:50,
         fontSize: 25,
         fontWeight: 'bold',
         marginLeft: 20,
