@@ -38,14 +38,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        
     },
 
     title: {
         paddingBottom: 60,
         paddingTop:30,
         fontSize: 45,
-        
+        fontWeight: 'bold',
     },
     button: {
         backgroundColor: '#31A672',

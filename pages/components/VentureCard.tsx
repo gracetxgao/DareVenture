@@ -16,8 +16,8 @@ const VentureCard = ({ title, image, desc }) => {
           source={{uri: image}}
             style={styles.image} />
       </View>
-      <View>
-        <Text>{title}</Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>{title}</Text>
         <Text>{desc}</Text>
       </View>
     </TouchableOpacity>
@@ -38,6 +38,15 @@ const styles = StyleSheet.create({
       height: 125,
       borderRadius: 25,
     },
+    textContainer: {
+      paddingLeft: 10,
+      paddingTop: 5,
+    },
+    title: {
+      fontSize: 15,
+      fontWeight: 'bold',
+      flexWrap: 'wrap',
+    }
 });
 
 export default VentureCard;
