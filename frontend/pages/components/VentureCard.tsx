@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       marginRight: 10,
       marginTop: 10,
       width: 180, 
-      height: 155,
+      height: 140,
       borderRadius: 15,
     },
     textContainer: {
