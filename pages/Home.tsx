@@ -6,9 +6,9 @@ import VenturesBox from './components/VenturesBox';
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text>today's venture</Text>
+            <Text style={styles.title}>Today's Venture</Text>
             <MainVentureCard navigation={navigation}/>
-            <Text>popular ventures</Text>
+            <Text style={styles.title}>Popular Ventures</Text>
             <VenturesBox cards={["first", "second", "third"]}/>
         </View>
     )

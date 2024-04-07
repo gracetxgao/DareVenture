@@ -14,7 +14,8 @@ const MainVentureCard = ({ navigation }) => {
         <Text style={styles.title}>Time to Touch Grass</Text>
         <Text style={styles.ventureDes}>Have you been sitting by the desk all day? Take a short break away from your device by going outside to touch some grass! Whether you play some spike ball, go on a walk, or just enjoy some time lying on the grass, take a picture and share with the DareVenture community.</Text>
         <Button
-          title="venture now"
+          buttonStyle={styles.button}
+          title="Venture now"
           onPress={() =>
             navigation.navigate('VenturePage')
         }
