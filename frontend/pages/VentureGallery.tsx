@@ -3,6 +3,8 @@ import VentureGalleryCard from "./components/VentureGalleryCard";
 import { useState, useEffect } from "react";
 import vgcService from '../server/ventures'
 import { Image, ImageSourcePropType, ImageResolvedAssetSource } from 'react-native';
+import * as FileSystem from 'expo-file-system';
+
 
 declare module 'react-native' {
   export function resolveAssetSource(source: ImageSourcePropType): ImageResolvedAssetSource;
@@ -12,7 +14,7 @@ const hikingPhoto = "https://i0.wp.com/besthikesbc.ca/wp-content/uploads/2020/11
 
 const VentureGallery = () => {
     const [ventures, setVentures] = useState([
-        { title: "go on a hike", image: hikingPhoto, date: "april 6, 2024" },
+        { title: "go on a hike", uri: hikingPhoto, date: "april 6, 2024" },
       ]);
 
 
@@ -22,27 +24,32 @@ const VentureGallery = () => {
             .getAll()
             .then(response => {
                 console.log('fulfilled');
-                setVentures(response)
+                setVentures(prevVentures => [...prevVentures, ...response])
             })
     }, [])
 
     console.log(`number of ventures: ${ventures.length}`);
     
     const ventureGalleryCards = ventures.map((v, index) => {
-        let imageSource;
-        if (v.image) {
-            if (v.image.startsWith('http') === true) {
-                imageSource = v.image;
+        console.log(v.uri);
+        
+        var imageSource;
+        if (v.uri) {
+            if (v.uri.startsWith('http')) {
+                imageSource = v.uri;
             } else {
-                imageSource = `data:image/jpg;base64,${v.image}`
+                imageSource = `data:image/jpg;charset=utf-8;base64, ${v.uri}`;
             }
         }
+
+        console.log(imageSource);
+
         
         return (
           <VentureGalleryCard
             key={index}
             title={v.title}
-            image={v.image}
+            image={imageSource}
             date={v.date}
           />
         );
