@@ -29,7 +29,7 @@ const ProfileScreen = ({ navigation }) => {
             
             <View style={styles.points}>
                 <View style={styles.pointsLeft}>
-                    <Text style={styles.name}>Name</Text>
+                    <Text style={styles.name}>Grace Gao</Text>
                     <Text>@username_836899</Text>
                     <VenturePoints />
                 </View>
