@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
         }
     },
     buttonTitle: {
-        fontSize: 12,
+        fontSize: 15,
         color: "black",
         fontWeight: 'bold',
         

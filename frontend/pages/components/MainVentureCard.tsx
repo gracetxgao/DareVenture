@@ -75,8 +75,7 @@ const styles = StyleSheet.create({
     },
     ventureDes: {
       color:'#AEAEAE',
-      fontSize: 10.5,
-      fontWeight: 'bold',
+      fontSize: 13,
       marginTop: 15,
       marginBottom: 2,
     }
