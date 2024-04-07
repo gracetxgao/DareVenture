@@ -16,6 +16,7 @@ const MainVentureCard = ({ navigation }) => {
         <Button
           buttonStyle={styles.button}
           title="Venture now"
+          titleStyle={styles.buttonTitle}
           onPress={() =>
             navigation.navigate('VenturePage')
         }
@@ -28,17 +29,19 @@ const MainVentureCard = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        borderWidth: 1,
-        borderColor: '#fff',
+        //borderWidth: 1,
+        //borderColor: '#fff',
+        paddingRight: 10,
     },
     ventureContainer: { 
-      flex:1
+      flex:1,
+      
     },
     image: {
       marginLeft: 10,
-      marginRight: 10,
+      marginRight: 13,
       marginTop: 10,
-      width: 175, 
+      width: 160, 
       height: 200,
       borderRadius: 20,
     },
@@ -46,21 +49,35 @@ const styles = StyleSheet.create({
       backgroundColor: '#31A672',
       borderRadius: 50,
       height: 40,
-      width:140,
-      marginTop: 10,
-      marginBottom: 10,
+      width: 140,
+      paddingTop: 8,
+      marginTop: 8,
+      marginBottom: 8,
       marginLeft: 10,
+      shadowColor: "#000000",
+      shadowOpacity: 0.17,
+      shadowRadius: 3,
+      shadowOffset: {
+        height: 1,
+        width: 1
+      }
+    },
+    buttonTitle: {
+      fontSize: 14,
+      color: "white",
       fontWeight: 'bold',
-      
     },
     title: {
       marginTop: 10,
       fontWeight: 'bold',
-      fontSize: 25,
+      fontSize: 18,
       flexWrap: 'wrap',
     },
     ventureDes: {
       color:'#AEAEAE',
+      fontSize: 13,
+      marginTop: 15,
+      marginBottom: 2,
     }
 });
 

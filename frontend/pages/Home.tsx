@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         paddingBottom: 10,
-        paddingTop:20,
+        paddingTop:50,
         marginLeft: 15,
     }
 });
