@@ -7,8 +7,6 @@ const VenturePoints = () => {
                 8260
                 </Text>
             <Text style={styles.points}>Venture Points</Text>
-            <Text style={styles.points}>50</Text>
-            <Text style={styles.text}>venture points</Text>
         </View>
     )
 }
@@ -16,9 +14,10 @@ const VenturePoints = () => {
 const styles = StyleSheet.create({
     pointsLeft: {
         backgroundColor: '#32A366',
-        padding: 0,
+        padding: 10,
         borderRadius: 100,
-        margin: 10,
+        margin: 15,
+        //marginTop: 10,
         
         alignItems: 'center',
 
@@ -31,39 +30,20 @@ const styles = StyleSheet.create({
         }
     },
     number: {
-        fontSize: 30,
+        fontSize: 35,
         color: "white",
         fontWeight: 'bold',
         //borderRadius: 100,
         marginTop: 20,
-        marginLeft: 0,
-        marginRight: 0,
-        
-        paddingTop: 20,
+        marginLeft: 10,
+        marginRight: 10,
+
+        paddingTop: 5,
     },
     points: {
-        fontSize: 10,
-        marginBottom: 40,
+        fontSize: 11,
+        marginBottom: 30,
         color: "white",
-        backgroundColor: '#fff',
-        padding: 10,
-        width:130,
-        height:130,
-        borderRadius: 65,
-        margin: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    points: {
-        color: '#32A366',
-        fontSize: 60,
-        textAlign: 'center',
-        fontWeight: 'bold',
-    },
-    text: {
-        color: '#32A366',
-        fontSize: 10,
-        textAlign: 'center',
         fontWeight: 'bold',
     }
 })

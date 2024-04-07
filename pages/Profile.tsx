@@ -8,7 +8,7 @@ const CurrentStreak = () => {
         <View style={styles.sideBox}>
             <Text style={styles.sideBoxTitle}>Current Streak</Text>
             <Text style={styles.sideBoxNumber}>15</Text>
-            <Text>days</Text>
+            <Text style={styles.sideBoxSubText}>days</Text>
         </View>
     )
 }
@@ -16,9 +16,9 @@ const CurrentStreak = () => {
 const VenturesCompleted = () => {
     return (
         <View style={styles.sideBox}>
-            <Text style={styles.sideBoxTitle}>Completed</Text>
+            <Text style={styles.sideBoxTitle}>    Completed    </Text>
             <Text style={styles.sideBoxNumber}>63</Text>
-            <Text>ventures</Text>
+            <Text style={styles.sideBoxSubText}>ventures</Text>
         </View>
     )
 }
@@ -37,6 +37,7 @@ const ProfileScreen = ({ navigation }) => {
                     <CurrentStreak />
                     <VenturesCompleted />
                     <Button
+                        style={styles.button}
                         title="venture gallery"
                         onPress={() =>
                             navigation.navigate('VentureGallery')
@@ -45,11 +46,11 @@ const ProfileScreen = ({ navigation }) => {
                 </View>
             </View>
             <View>
-                <Text style={styles.componentTitle}>your venture wishlist</Text>
+                <Text style={styles.componentTitle}>Your Venture Wishlist</Text>
                 <ProductsBox cards={["first", "second", "third"]} redeemed={false}/>
             </View>
             <View>
-                <Text style={styles.componentTitle}>redeemed venture items</Text>
+                <Text style={styles.componentTitle}>Redeemed Items</Text>
                 <ProductsBox cards={["first", "second", "third"]} redeemed={true}/>
             </View>
         </View>
@@ -91,22 +92,38 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         alignSelf: 'flex-end',
         alignItems: 'center',
+        margin: 2,
     },
     name: {
-        fontSize: 40,
+        fontSize: 30,
         fontWeight: 'bold',
     },
     componentTitle: {
-        fontSize: 20,
+        fontSize: 15,
+        fontWeight: 'bold',
     },
     sideBoxTitle: {
+        fontSize: 12,
         fontWeight: 'bold',
     },
     sideBoxNumber: {
-        fontSize: 50,
+        fontSize: 22,
         fontWeight: 'bold',
         color: '#0D4803',
     },
+    button: {
+        fontSize: 10,
+        backgroundColor: '#31A672',
+        borderRadius: 50,
+        height: 40,
+        width:140,
+        marginTop: 10,
+        marginBottom: 10,
+        marginLeft: 10,
+    },
+    sideBoxSubText: {
+        fontSize: 5,
+    }
 });
 
-export default ProfileScreen
+export default ProfileScreen;
