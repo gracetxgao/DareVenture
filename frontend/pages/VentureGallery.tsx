@@ -44,13 +44,23 @@ const VentureGallery = () => {
 
         console.log(imageSource);
 
+        let title = v.title;
+        let date = v.date;
+    
+        if (!title) {
+            title = "Adventures!!";
+        }
+    
+        if (!date) {
+            date = "April 5, 2024";
+        }
         
         return (
           <VentureGalleryCard
             key={index}
-            title={v.title}
+            title={title}
             image={imageSource}
-            date={v.date}
+            date={date}
           />
         );
     });
