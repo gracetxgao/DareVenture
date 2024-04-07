@@ -15,6 +15,7 @@ const NewItemPage = ({ navigation }) => {
           <Text style={styles.productDesc}>2000 points for 20% off</Text>
       </View>
       <Button buttonStyle={styles.button}
+      titleStyle={styles.buttonTitle}
             title="Redeem"
             onPress={() =>
                 navigation.navigate('RedeemedItemPage')
@@ -77,6 +78,9 @@ const styles = StyleSheet.create({
     //fontWeight: 'bold',
     marginTop: 10,
     color: '#ACACAC',
+  },
+  buttonTitle: {
+    fontWeight: 'bold',
   }
 });
 

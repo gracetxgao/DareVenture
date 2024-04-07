@@ -25,6 +25,7 @@ const RedeemedItemPage = ({ navigation }) => {
               style={styles.barcodeImage}
               resizeMode='contain' />
           <Button buttonStyle={styles.button}
+                titleStyle={styles.buttonTitle}
                 title="Purchase Online"
                 onPress={() =>
                     navigation.navigate('RedeemedItemPage')
@@ -96,6 +97,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     height:15,
     color: '#fff',
+  },
+  buttonTitle: {
+    fontWeight: 'bold'
   }
 
 });

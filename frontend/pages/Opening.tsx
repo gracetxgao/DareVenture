@@ -15,6 +15,7 @@ const OpeningScreen = ({ navigation }) => {
             <Image style={styles.logo} source={Logo} resizeMode="contain" />
             <Text style={styles.title}>DareVenture</Text>
             <Button buttonStyle={styles.button}
+                titleStyle={styles.buttonTitle}
                 title="Get Started"
                 onPress={() =>
                     navigation.navigate('Login')
@@ -48,6 +49,9 @@ const styles = StyleSheet.create({
         width: 300, // Adjust the width as needed
         height: 200,
         marginTop:-50,
+    },
+    buttonTitle: {
+        fontWeight: 'bold',
     }
   });
 

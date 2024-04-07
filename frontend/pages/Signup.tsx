@@ -21,6 +21,7 @@ const SignupScreen = ({ navigation }) => {
                 title='I would like to receive your newsletter and other promotional information.'
             />
             <Button
+                titleStyle={styles.buttonTitle}
                 buttonStyle={styles.button}
                 title="Sign Up"
                 onPress={() =>
@@ -55,6 +56,9 @@ const styles = StyleSheet.create({
         borderStyle: 'solid',
         backgroundColor: '#F6F6F6',
         borderColor: '#E8E8E8',
+    },
+    buttonTitle: {
+        fontWeight: 'bold',
     }
     
 
