@@ -13,8 +13,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import RedeemedItemPage from './pages/RedeemedItem';
 import NewItemPage from './pages/NewItem';
 import VenturePage from './pages/Venture';
-import VentureGallery from './pages/VentureGallery';
-import Icon from 'react-native-vector-icons';
+import VentureGallery from './VentureGallery';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -24,7 +23,7 @@ const BottomTabNavigator = () => (
     <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
     <Tab.Screen name="Rewards" component={RewardsScreen} options={{ headerShown: false }}/>
     <Tab.Screen name="Achievements" component={AchievementsScreen} options={{ headerShown: false }} />
-    <Tab.Screen  name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>
+    <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>
   </Tab.Navigator>
 );
 
@@ -98,3 +97,4 @@ export default function App() {
       <MyStack />
   )
 };
+
