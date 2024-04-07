@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 50,
     backgroundColor: 'green',
-    fontFamily: "Inter", // get font later!!
+    // fontFamily: "Inter", // get font later!!
     width: 150,
 },
 });

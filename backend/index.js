@@ -1,8 +1,8 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
-require('dotenv').config()
 
-const Note = require('./models/image')
+const Image = require('./models/image')
 
 app.use(express.static('dist'))
 
@@ -14,6 +14,49 @@ const requestLogger = (request, response, next) => {
   next()
 }
 
+app.use(requestLogger)
+
+const cors = require('cors')
+
+app.use(cors())
+
+app.use(express.json())
+
+const unknownEndpoint = (request, response) => {
+  response.status(404).send({ error: 'unknown endpoint' })
+}
+
+app.get('/api/images', (request, response) => {
+  Image.find({}).then(images => {
+    response.json(images)
+    console.log(`${images}`);
+  })
+})
+
+app.post('/api/images', (request, response) => {
+  const body = request.body
+
+  if (body.uri === undefined) {
+    return response.status(400).json({ error: 'content missing' })
+  }
+
+  const image = new Image({
+    uri: body.uri,
+  })
+  console.log(image);
+
+  image.save().then(savedImage => {
+    response.json(savedImage)
+  })
+  .catch(error => next(error))
+})
+
+app.use(unknownEndpoint)
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
+
 const errorHandler = (error, request, response, next) => {
   console.error(error.message)
 
@@ -24,54 +67,4 @@ const errorHandler = (error, request, response, next) => {
   next(error)
 }
 
-const cors = require('cors')
-
-app.use(cors())
-app.use(express.json())
-app.use(requestLogger)
-
-const unknownEndpoint = (request, response) => {
-  response.status(404).send({ error: 'unknown endpoint' })
-}
-
-app.get('/api/images', (request, response) => {
-  Image.find({}).then(images => {
-    response.json(images)
-  })
-})
-
-app.post('/api/images', (request, response) => {
-  const body = request.body
-
-  if (body.content === undefined) {
-    return response.status(400).json({ error: 'content missing' })
-  }
-
-  const image = new Image({
-    content: body.content,
-  })
-
-  image.save().then(savedImage => {
-    response.json(savedImage)
-  })
-})
-
-app.get('/api/notes/:id', (request, response, next) => {
-  Note.findById(request.params.id)
-    .then(note => {
-      if (note) {
-        response.json(note)
-      } else {
-        response.status(404).end()
-      }
-    })
-    .catch(error => next(error))
-})
-
-app.use(unknownEndpoint)
 app.use(errorHandler)
-
-const PORT = process.env.PORT
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})

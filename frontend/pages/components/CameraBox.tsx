@@ -3,10 +3,13 @@ import * as ImagePicker from 'expo-image-picker';
 import vgcService from '../../server/ventures';
 import { useState } from 'react';
 import { Button } from "react-native-elements";
+import * as ImageManipulator from 'expo-image-manipulator';
+import * as FileSystem from 'expo-file-system';
+
 
 const CameraBox = () => {
-
-    const [imageUri, setImageUri] = useState(null);
+    const [uri, setUri] = useState(null);
+    const [base64, setBase64] = useState(null);
 
     const openCamera = async () => {
         const permissionResult = await ImagePicker.requestCameraPermissionsAsync();
@@ -19,16 +22,39 @@ const CameraBox = () => {
         console.log(`result is ${result}`);
         
         if (result.canceled === false) {
-            console.log(result.assets[0].uri);
-            setImageUri(result.assets[0].uri);
+            try {
+                const uri = result.assets[0].uri;
+                setUri(uri);
+    
+                const resizedImage = await ImageManipulator.manipulateAsync(
+                    uri,
+                    [{ resize: { width: 400 } }],
+                    { compress: 0.7, format: ImageManipulator.SaveFormat.JPEG }
+                );
+    
+                const base64Image = await FileSystem.readAsStringAsync(resizedImage.uri, { encoding: FileSystem.EncodingType.Base64 });
+
+                console.log(base64Image);
+    
+                setBase64(base64Image);
+            } catch (error) {
+                console.error('Error processing image:', error);
+            }
         }
     }
 
-    const handleUpload = async (imageUri) => {
+    const handleUpload = async (base64) => {
+        console.log(`passed uri: ${base64}`);
+        
         try {
             vgcService
-                .create(imageUri)
-            console.log('Image saved successfully to MongoDB');
+                .create(base64)
+                .then(response => {
+                    console.log('Image saved successfully to MongoDB');
+                })
+                .catch(error => {
+                    console.log(error.response.data.error);
+                })
         } catch (error) {
             console.error('Error saving image to MongoDB:', error);
         }
@@ -37,8 +63,8 @@ const CameraBox = () => {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={openCamera}>
-                {imageUri ? (
-                    <Image source={{ uri: imageUri }} style={styles.image} />
+                {base64 ? (
+                    <Image source={{ uri: uri }} style={styles.image} />
                 ) : (
                     <TouchableOpacity onPress={openCamera}>
                         <Image 
@@ -50,7 +76,7 @@ const CameraBox = () => {
             </TouchableOpacity>
             <Button buttonStyle={styles.button}
                 title="Post Your Venture"
-                onPress={handleUpload}
+                onPress={() => handleUpload(base64)}
             />
         </View>
     )
@@ -77,7 +103,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
         borderRadius: 50,
         backgroundColor: '#5DB075',
-        fontFamily: "Inter", // get font later!!
+        // fontFamily: "Inter", // get font later!!
         width: 250,
         fontWeight: 'bold',
     },

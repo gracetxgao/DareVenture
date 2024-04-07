@@ -9,10 +9,13 @@ mongoose.set('strictQuery',false)
 mongoose.connect(url)
 
 const imageSchema = new mongoose.Schema({
-  uri: String,
-})
+    uri: {
+      type: String,
+      required: true
+    }
+  });
 
-const Image = mongoose.model('image', imageSchema)
+const Image = mongoose.model('Image', imageSchema)
 
 if (process.argv.length === 3) { // node mongo.js password
   console.log('images:');
