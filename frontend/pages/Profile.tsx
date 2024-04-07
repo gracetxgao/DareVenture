@@ -49,7 +49,8 @@ const ProfileScreen = ({ navigation }) => {
             <View>
                 <Text style={styles.componentTitle}>Your Venture Wishlist</Text>
                 <ProductsBox cards={[["Atom Hoody Women's", "https://s3-alpha-sig.figma.com/img/d3ba/dd32/74850102af73d30e6ba278a7e1092071?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ax1KGQTtS6sSUYAt-r8Cg0rSn36ivuwz8O7zFOCyi9ZScJx1O9ohOpoqWso5uTTxHCutCGeaRIhp9DTdyKjOUDj39q-aloU0OlKcv18XidsOhcT4UXoMAjzM17H32bD~x6zN4pt1J04chEFHGdbGxgm1HLDdutY8Hk2Fj6h~dpCaO9l~aF~ucICtigbRr5NhchBbDqPyZ8pyEdbLje1GvmR-1AOkS-NSeBi-JUOOkSswof6N~xI9F68SHJLOFbgahXlgYkETZM7mQFwev0PzvZWY1IeNgRpaDA7RfT1qo-8oKoqfFvmehw8lCNMJxWq2n2u-yt--RRGCcDahO1yiyw__", "Arc'Teryx", "2000 points for 20% off"]
-            ,["Bird Head Toque", "https://s3-alpha-sig.figma.com/img/6582/a5b3/9f5022cc87d6b6cf099eb897b401be3b?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hn~s2SEazO2PT5iXLbGHd~44cqImn6kPRk1-9LVKG75QbAz0bFql7DGxUNqnXEFn8g3cr4bNlLYqO426cq9W0BSaQAWKZPLMha1uZjYhoA2TmoM6NDavm62uB60Lh6RI~58AmHWMYPvPHjBqNcf4vi~zxcM-ZAWbTZsOE8mL5aHCq3LuCU18naAUwQp8HrLi0QkJxISa1Kc0pxfKUMc2bPYlRYIZuW1m3KZCYN9av-tj0nLSbC96aHKddwJX6vcIQinIwtIdgKej9bz8o23hNGK2WNGosFCA2AUYFMiA7KIniZ0PCTpMB4P0BCa3UxalQ75QpHmHQdvH4tKp69py7g__", "Arc'Teryx", '700 points for 20% off']]} redeemed={false}/>
+            ,["Bird Head Toque", "https://s3-alpha-sig.figma.com/img/6582/a5b3/9f5022cc87d6b6cf099eb897b401be3b?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hn~s2SEazO2PT5iXLbGHd~44cqImn6kPRk1-9LVKG75QbAz0bFql7DGxUNqnXEFn8g3cr4bNlLYqO426cq9W0BSaQAWKZPLMha1uZjYhoA2TmoM6NDavm62uB60Lh6RI~58AmHWMYPvPHjBqNcf4vi~zxcM-ZAWbTZsOE8mL5aHCq3LuCU18naAUwQp8HrLi0QkJxISa1Kc0pxfKUMc2bPYlRYIZuW1m3KZCYN9av-tj0nLSbC96aHKddwJX6vcIQinIwtIdgKej9bz8o23hNGK2WNGosFCA2AUYFMiA7KIniZ0PCTpMB4P0BCa3UxalQ75QpHmHQdvH4tKp69py7g__", "Arc'Teryx", '700 points for 20% off']
+            ,["Mantis 26 Backpack", 'https://s3-alpha-sig.figma.com/img/08ed/ad85/bcae1cd8d957dae9eb77b244ff3ef186?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=m0rryFwdz69pJoZQM0JJemNXAK5eri29UTeXUo4eoPTGGklWsYUid7gR9Y2nBsltbLspFVpaB8QBisB-R~plQlzUMtEDCQLbotKHOHe9YAKJzr0ptCuzCvBrhziwZ5P5r0jtzFsRcpj-jbi6STTLa1W2QBotikt9TVJRMlbCdfSPXtvgPafDFoysKiPQ0dvqe9y~0SPzf7uA-FXjoCzLBaTl9h-dD2Tr9TLLgm8Cks-bQXEfOOSxvQNHaACeORUYB1XURgWjb2l7ikmR9lkYem1qJUbF0ai6t-FSOLbFCvTVN8rdHy2LMZaHpkJQ8KzXOMa2f6p-HbJD-GHb1Pf52Q__', "Arc'Teryx", "2000 points for 20% off"]]} redeemed={false}/>
             </View>
             <View>
                 <Text style={styles.componentTitle}>Redeemed Items</Text>
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
         //borderWidth: 1,
         //borderColor: 'black',
         marginBottom: 2,
-        paddingTop: 40,
+        paddingTop: 15,
         
     },
     pointsRight: {
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     componentTitle: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: 'bold',
         margin: 4,
     },

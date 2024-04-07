@@ -32,34 +32,35 @@ const ProductCard = ({ title, redeemed, image, company, desc }) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginLeft:10,
+        marginLeft:5,
         flexDirection: 'column',
         borderWidth: 1,
-        width: 200, 
+        width: 150, 
         height: 230,
         alignItems: 'center',
         borderRadius: 20,
         backgroundColor: '#fff',
         borderColor: 'lightgrey',
         marginRight: 10,
+        marginBottom:5,
     },
     image: {
       marginTop: 8,
-      width: 150, 
-      height: 160,
+      width: 130, 
+      height: 120,
       borderRadius: 20,
      
     },
     item: {
-      fontSize: 15,
+      fontSize: 13,
       fontWeight: 'bold',
-      marginTop: 8,
+      marginTop: 5,
       marginLeft:-5,
     },
     text: {
-      paddingTop:2,
+      paddingTop: 2,
       color: '#AEAEAE',
-      fontSize: 10,
+      fontSize: 9,
       marginLeft:-5,
     }
 });
