@@ -49,6 +49,7 @@ const CameraBox = () => {
                 )}
             </TouchableOpacity>
             <Button buttonStyle={styles.button}
+            titleStyle={styles.buttonTitle}
                 title="Post Your Venture"
                 onPress={handleUpload}
             />
@@ -80,6 +81,9 @@ const styles = StyleSheet.create({
         width: 250,
         fontWeight: 'bold',
     },
+    buttonTitle:{
+        fontWeight: 'bold',
+    }
 });
 
 export default CameraBox;

@@ -16,6 +16,7 @@ const LoginScreen = ({ navigation }) => {
                 placeholder='Password'
             />
             <Button
+                titleStyle={styles.buttonTitle}
                 buttonStyle ={styles.button}
                 title="Log In"
                 onPress={() =>
@@ -23,6 +24,7 @@ const LoginScreen = ({ navigation }) => {
                 }
             />
             <Button
+                titleStyle={styles.buttonTitle}
                 buttonStyle ={styles.button}
                 title="Create An Account"
                 onPress={() =>
@@ -59,6 +61,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#F6F6F6',
         borderColor: '#E8E8E8',
         
+    }, buttonTitle: {
+        fontWeight: 'bold',
     }
 
 
