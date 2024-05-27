@@ -1,67 +1,64 @@
-import { Text, View, StyleSheet} from 'react-native';
-import { Button, Input, CheckBox } from 'react-native-elements';
+import React from 'react';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Button, Input } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/Entypo';
+
+import colors from '../assets/themes/Colors';
+import appStyles from '../assets/themes/Styles';
 
 const SignupScreen = ({ navigation }) => {
     return (
-        <View style={styles.container}>
+        <View style={appStyles.container}>
+            <TouchableOpacity style={appStyles.backButton} onPress={() => navigation.goBack()} >
+                <Icon name="chevron-left" size={30} color={colors.accent} />
+            </TouchableOpacity>
             <Text style={styles.title}>Sign Up</Text>
-            <Input
-                placeholder='Name'
-                style={styles.input}
-            />
-            <Input
-                placeholder='Email'
-                style={styles.input}
-            />
-            <Input
-                placeholder='Password'
-                style={styles.input}
-            />
-            <CheckBox
-                title='I would like to receive your newsletter and other promotional information.'
-            />
+            <Input inputContainerStyle={styles.inputComponent} inputStyle={styles.inputText} placeholder='name' />
+            <Input inputContainerStyle={styles.inputComponent} inputStyle={styles.inputText} placeholder='username' />
+            <Input inputContainerStyle={styles.inputComponent} inputStyle={styles.inputText} placeholder='password' />
             <Button
-                titleStyle={styles.buttonTitle}
-                buttonStyle={styles.button}
+                titleStyle={appStyles.buttonTitle}
+                buttonStyle={appStyles.button}
                 title="Sign Up"
-                onPress={() =>
-                    navigation.navigate('Home')
-                }
+                onPress={() => navigation.navigate('MainTabs')}
             />
         </View>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop:100,
-        flex: 1,
-        alignItems: 'center',
-        backgroundColor: '#fff',
-    },
     title: {
-        paddingBottom: 60,
-        paddingTop:30,
-        fontSize: 45,
-        fontWeight: 'bold',
+        fontSize: 36,
+        color: colors.accent,
+        marginBottom: 40,
     },
-    button: {
-        backgroundColor: '#5DB075',
-        borderRadius: 50,
-        height: 50,
-        width:300,
-        marginTop: 30,
+    inputText: {
+        backgroundColor: colors.lightAccent,
+        paddingLeft: 20,
+        borderRadius: 25,
+    }, 
+    inputComponent: {
+        borderBottomWidth: 0,
+        marginLeft: 70,
+        marginRight: 70,
+        alignSelf: 'center',
+        // borderWidth: 2,
+        // borderColor: '#000',
     },
-    input: {
-        borderStyle: 'solid',
-        backgroundColor: '#F6F6F6',
-        borderColor: '#E8E8E8',
+    createButtonContainer: {
+        marginRight: 80,
+        alignSelf: 'flex-end',
+        marginTop: -25,
     },
-    buttonTitle: {
-        fontWeight: 'bold',
-    }
-    
-
+    createButtonTitle: {
+        color: colors.textPrimary,
+        fontSize: 14,
+    },
+    createButton: {
+        backgroundColor: null,
+        // borderWidth: 2,
+        // borderColor: '#000',
+    },
 });
 
 export default SignupScreen;

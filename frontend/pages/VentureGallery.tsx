@@ -42,7 +42,7 @@ const VentureGallery = () => {
             }
         }
 
-        console.log(imageSource);
+        // console.log(imageSource);
 
         let title = v.title;
         let date = v.date;

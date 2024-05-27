@@ -1,21 +1,21 @@
+import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Image } from 'react-native';
 
+import colors from '../assets/themes/Colors'
+import appStyles from '../assets/themes/Styles'
 
-const Poppins = require('../assets/fonts/Poppins/Poppins-Bold.ttf');
 const Logo = require('../assets/DareVentureLogo.png');
 
 const OpeningScreen = ({ navigation }) => {
-    
     return (
-
-
-        <View style={styles.container}>
+        <View style={appStyles.container}>
             <Image style={styles.logo} source={Logo} resizeMode="contain" />
             <Text style={styles.title}>DareVenture</Text>
-            <Button buttonStyle={styles.button}
-                titleStyle={styles.buttonTitle}
+            <Button 
+                buttonStyle={appStyles.button}
+                titleStyle={appStyles.buttonTitle}
                 title="Get Started"
                 onPress={() =>
                     navigation.navigate('Login')
@@ -26,33 +26,18 @@ const OpeningScreen = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+    logo: {
+        width: 300,
+        height: 200,
     },
     title: {
-        paddingTop: 30,
-        fontSize: 30,
-        paddingBottom: 20,
-        fontFamily: 'Verdana', // fix font later!!!
+        fontSize: 36,
+        marginTop: 10,
+        marginBottom: 10,
         fontWeight: 'bold',
+        // borderWidth: 2,
+        // borderColor: '#000',
     },
-    button: {
-        margin: 20,
-        borderRadius: 50,
-        backgroundColor: '#5DB075',
-        width: 150,
-    },
-    logo: {
-        width: 300, // Adjust the width as needed
-        height: 200,
-        marginTop:-50,
-    },
-    buttonTitle: {
-        fontWeight: 'bold',
-    }
-  });
+});
 
 export default OpeningScreen;

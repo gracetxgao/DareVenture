@@ -19,7 +19,7 @@ const CameraBox = () => {
         }
         const result = await ImagePicker.launchCameraAsync();
 
-        console.log(`result is ${result}`);
+        // console.log(`result is ${result}`);
         
         if (result.canceled === false) {
             try {
@@ -34,7 +34,7 @@ const CameraBox = () => {
     
                 const base64Image = await FileSystem.readAsStringAsync(resizedImage.uri, { encoding: FileSystem.EncodingType.Base64 });
 
-                console.log(base64Image);
+                // console.log(base64Image);
     
                 setBase64(base64Image);
             } catch (error) {
@@ -44,7 +44,7 @@ const CameraBox = () => {
     }
 
     const handleUpload = async (base64) => {
-        console.log(`passed uri: ${base64}`);
+        // console.log(`passed uri: ${base64}`);
         
         try {
             vgcService
