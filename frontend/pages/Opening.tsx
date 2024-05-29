@@ -16,7 +16,7 @@ const OpeningScreen = ({ navigation }) => {
             <Button 
                 buttonStyle={appStyles.button}
                 titleStyle={appStyles.buttonTitle}
-                title="Get Started"
+                title="Start"
                 onPress={() =>
                     navigation.navigate('Login')
                 }

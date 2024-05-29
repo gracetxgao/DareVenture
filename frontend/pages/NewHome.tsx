@@ -1,49 +1,46 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import { useState } from "react";
+import { useFocusEffect } from '@react-navigation/native';
 
 import colors from '../assets/themes/Colors';
 import appStyles from '../assets/themes/Styles';
 
-import VentureGalleryCard from "./components/VentureGalleryCard";
+import VentureCardLarge from "./components/VentureCardLarge";
 
-const hikingPhoto = "https://i0.wp.com/besthikesbc.ca/wp-content/uploads/2020/11/DSC09465-1.jpg?fit=2048%2C974&ssl=1";
+const hikingPhoto = "https://www.hellobc.com/content/uploads/2018/02/6-2756-1024x683.jpg";
 
 const NewHomeScreen = ({ navigation }) => {
     const [ventures, setVentures] = useState([
-        { title: "go on a hike", uri: hikingPhoto, date: "april 6, 2024" },
-        { title: "go on a hike", uri: hikingPhoto, date: "april 6, 2024" },
-        { title: "go on a hike", uri: hikingPhoto, date: "april 6, 2024" },
-        { title: "go on a hike", uri: hikingPhoto, date: "april 6, 2024" },
+        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "april 6 9:15 pm" },
+        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "may 21, 11:43 am" },
+        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "may 10, 12:01 pm" },
+        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "april 23, 6:41 pm" },
     ]);
     
-    const ventureGalleryCards = ventures.map((v, index) => {
-        let title = v.title;
-        let date = v.date;
-        let imageSource = v.uri
-        
-        return (
-            <VentureGalleryCard
-                key={index}
-                title={title}
-                image={imageSource}
-                date={date}
-            />
-        );
-    });
-
     return (
-        <View style={styles.container}>
-            <ScrollView horizontal={false} style={styles.container}>
-                {ventureGalleryCards}
-            </ScrollView>
+        <View style={appStyles.container}>
+            <FlatList
+                style={styles.container}
+                data={ventures}
+                showsVerticalScrollIndicator={false}
+                renderItem={({ item }) => (
+                    <VentureCardLarge
+                        title={item.title}
+                        image={hikingPhoto}
+                        user={item.user}
+                        date={item.date}
+                    />
+                )}
+                keyExtractor={(item, index) => index.toString()}
+            />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 20,
+        marginTop: 50,
     },
     title: {
         marginTop:50,

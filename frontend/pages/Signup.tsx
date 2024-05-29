@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Button, Input } from 'react-native-elements';
+import { CommonActions } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Entypo';
 
 import colors from '../assets/themes/Colors';
@@ -20,7 +21,14 @@ const SignupScreen = ({ navigation }) => {
                 titleStyle={appStyles.buttonTitle}
                 buttonStyle={appStyles.button}
                 title="Sign Up"
-                onPress={() => navigation.navigate('MainTabs')}
+                onPress={() => {
+                    navigation.dispatch(
+                        CommonActions.reset({
+                            index: 0,
+                            routes: [{ name: 'MainTabs' }],
+                        })
+                    );
+                }}
             />
         </View>
     );

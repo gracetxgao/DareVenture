@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import VentureGalleryCard from "./components/VentureGalleryCard";
+import VentureGalleryCard from "./components/VentureCardLarge";
 import { useState, useEffect } from "react";
 import vgcService from '../server/ventures'
 import { Image, ImageSourcePropType, ImageResolvedAssetSource } from 'react-native';
@@ -46,6 +46,7 @@ const VentureGallery = () => {
 
         let title = v.title;
         let date = v.date;
+        let user = 'grace'
     
         if (!title) {
             title = "Adventures!!";
@@ -60,6 +61,7 @@ const VentureGallery = () => {
             key={index}
             title={title}
             image={imageSource}
+            user={user}
             date={date}
           />
         );
