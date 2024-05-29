@@ -16,13 +16,13 @@ const LoginScreen = ({ navigation }) => {
             <Text style={styles.title}>Log In</Text>
             <Input inputContainerStyle={styles.inputComponent} inputStyle={styles.inputText} placeholder='username' />
             <Input inputContainerStyle={styles.inputComponent} inputStyle={styles.inputText} placeholder='password' />
-                <Button
-                    titleStyle={styles.createButtonTitle}
-                    buttonStyle={styles.createButton}
-                    containerStyle={styles.createButtonContainer}
-                    title="Create An Account"
-                    onPress={() => navigation.navigate('Signup')}
-                />
+            <Button
+                titleStyle={styles.createButtonTitle}
+                buttonStyle={styles.createButton}
+                containerStyle={styles.createButtonContainer}
+                title="Create An Account"
+                onPress={() => navigation.navigate('Signup')}
+            />
             <Button
                 titleStyle={appStyles.buttonTitle}
                 buttonStyle={appStyles.button}

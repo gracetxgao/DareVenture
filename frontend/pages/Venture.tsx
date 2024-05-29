@@ -2,7 +2,7 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import { Button } from "react-native-elements";
 import CameraBox from "./components/CameraBox";
 
-const VenturePage = () => {
+const VenturePage = ({ title, image, points, description }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Time to Touch Grass</Text>

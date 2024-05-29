@@ -1,18 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 import colors from '../../assets/themes/Colors';
 
-const VentureGalleryCard = ({ title, image, user, date }) => {
+const VentureGalleryCard = ({ navigation, title, image, points, description, user, date }) => {
+  const handleCardPress = () => {
+    navigation.navigate('Venture', { 
+      title: title,
+      image: image,
+      points: points,
+      description: description
+    });
+  };
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={handleCardPress} style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       <Image source={{uri: image}} style={styles.image} />
       <View style={styles.bottomTextContainer}>
         <Text style={styles.bottomTextItem}>@{user}</Text>
         <Text style={styles.bottomTextItem}>{date}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

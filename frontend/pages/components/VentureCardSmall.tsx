@@ -9,17 +9,14 @@ import { RootStackParamList } from './Navigation';
 
 const hikingPhoto = "https://www.hellobc.com/content/uploads/2018/02/6-2756-1024x683.jpg";
 
-const VentureCardSmall = ({ title, image, points }) => {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+const VentureCardSmall = ({ title, image, points, description, navigation }) => {
 
   const handleCardPress = () => {
-    navigation.navigate('VentureCategory', { 
-      category: 'Category 2',
-      cards: [
-        ["Go on a Hike", hikingPhoto, "50", "go hike! hiking is fun!"], 
-        ["Dance Away", hikingPhoto, "50", "go hike! hiking is fun!"], 
-        ["Cloudgazing", hikingPhoto, "50", "go hike! hiking is fun!"]
-      ]
+    navigation.navigate('Venture', { 
+      title: title,
+      image: image,
+      points: points,
+      description: description
     });
   };
 

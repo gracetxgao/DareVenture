@@ -5,7 +5,7 @@ export type RootStackParamList = {
   Login: undefined;
   Signup: undefined;
   MainTabs: undefined;
-  Venture: undefined;
+  Venture: { title: string; image: string, points: string, description: string };
   VentureCategory: { category: string; cards: Array<Array<String>> };
 };
 

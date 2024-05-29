@@ -12,10 +12,10 @@ const hikingPhoto = "https://www.hellobc.com/content/uploads/2018/02/6-2756-1024
 
 const NewHomeScreen = ({ navigation }) => {
     const [ventures, setVentures] = useState([
-        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "april 6 9:15 pm" },
-        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "may 21, 11:43 am" },
-        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "may 10, 12:01 pm" },
-        { title: "go on a hike", uri: hikingPhoto, user: "gracetxgao", date: "april 23, 6:41 pm" },
+        { title: "go on a hike", image: hikingPhoto, points: '50', description: 'i love hiking!!!', user: "gracetxgao", date: "april 6 9:15 pm" },
+        { title: "go on a hike", image: hikingPhoto, points: '50', description: 'i love hiking!!!', user: "gracetxgao", date: "april 6 9:15 pm" },
+        { title: "go on a hike", image: hikingPhoto, points: '50', description: 'i love hiking!!!', user: "gracetxgao", date: "april 6 9:15 pm" },
+        { title: "go on a hike", image: hikingPhoto, points: '50', description: 'i love hiking!!!', user: "gracetxgao", date: "april 6 9:15 pm" },
     ]);
     
     return (
@@ -26,8 +26,11 @@ const NewHomeScreen = ({ navigation }) => {
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => (
                     <VentureCardLarge
+                        navigation={navigation}
                         title={item.title}
-                        image={hikingPhoto}
+                        image={item.image}
+                        points={item.points}
+                        description={item.description}
                         user={item.user}
                         date={item.date}
                     />
