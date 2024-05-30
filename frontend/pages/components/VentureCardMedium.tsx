@@ -1,13 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button, Image } from 'react-native-elements';
-import { useNavigation } from '@react-navigation/native';
 
 import colors from '../../assets/themes/Colors'
 import appStyles from '../../assets/themes/Styles';
 
 const VentureCardMedium = ({ title, points, description, image, navigation }) => {
-  // const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -26,8 +24,13 @@ const VentureCardMedium = ({ title, points, description, image, navigation }) =>
           buttonStyle={appStyles.smallButton}
           titleStyle={appStyles.smallButtonTitle}
           onPress={() =>
-            navigation.navigate('Venture')
-        }
+            navigation.navigate('Venture', { 
+              title: title,
+              image: image,
+              points: points,
+              description: description
+            })
+          }
         />
       </View>
     </View>

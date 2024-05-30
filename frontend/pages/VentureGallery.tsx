@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import VentureGalleryCard from "./components/VentureCardLarge";
+import VentureGalleryLarge from "./components/VentureCardLarge";
 import { useState, useEffect } from "react";
 import vgcService from '../server/ventures'
 import { Image, ImageSourcePropType, ImageResolvedAssetSource } from 'react-native';
@@ -57,7 +57,7 @@ const VentureGallery = () => {
         }
         
         return (
-          <VentureGalleryCard
+          <VentureGalleryLarge
             key={index}
             title={title}
             image={imageSource}
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     },
     title: {
         marginTop:50,
-        fontSize: 25,
+        fontSize: 24,
         fontWeight: 'bold',
         marginLeft: 20,
     },

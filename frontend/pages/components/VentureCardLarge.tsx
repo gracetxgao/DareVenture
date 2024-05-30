@@ -3,8 +3,9 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 import colors from '../../assets/themes/Colors';
 
-const VentureGalleryCard = ({ navigation, title, image, points, description, user, date }) => {
+const VentureGalleryLarge = ({ navigation, title, image, points, description, user, date }) => {
   const handleCardPress = () => {
+    console.log('large', title, points, description);
     navigation.navigate('Venture', { 
       title: title,
       image: image,
@@ -58,4 +59,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default VentureGalleryCard;
+export default VentureGalleryLarge;

@@ -1,33 +1,45 @@
-import ProductCard from './ProductCard';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, Text, TouchableOpacity } from 'react-native';
+import { Button, Input } from 'react-native-elements';
 
-interface ProductsBoxTypes {
-    cards: Array<Array<String>>
-    redeemed: Boolean
-}
+import colors from "../../assets/themes/Colors";
+import appStyles from "../../assets/themes/Styles";
 
-const ProductsBox = ({ cards, redeemed }: ProductsBoxTypes) => {
-    const ProductCards = cards.map((card, index) => <ProductCard key={index} title={card[0]} redeemed={redeemed} image={card[1]} company= {card[2]} desc= {card[3]}/>)
+import VentureCardSmall from "./VentureCardSmall"
+import ProductCardSmall from './ProductCardSmall';
+
+const ProductsBox = ({ cards, navigation }) => {
+    const ProductCards = cards.map((card, index) => 
+        <ProductCardSmall 
+            navigation={navigation} 
+            key={index} 
+            item={card.item} 
+            brand={card.brand}
+            image={card.image} 
+            points={card.points} 
+            description={card.description}
+            redeemed={card.redeemed}
+        />)
 
     return (
-        <ScrollView horizontal={true} style={styles.container}>
-            {ProductCards}
-        </ScrollView>
+        <View>
+            <ScrollView horizontal={true} style={styles.container} showsHorizontalScrollIndicator={false}>
+                {ProductCards}
+            </ScrollView>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        //borderWidth: 1,
-        //borderColor: 'black',
-        shadowColor: "#000000",
-        shadowOpacity: 0.17,
-        shadowRadius: 3,
-        shadowOffset: {
-          height: 1,
-          width: 1
-        }
+        marginTop: 10
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginTop: 20,
+        marginLeft: 15,
+        color: colors.textPrimary,
     },
 });
 

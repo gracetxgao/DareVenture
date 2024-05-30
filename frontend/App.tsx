@@ -13,9 +13,10 @@ import OpeningScreen from './pages/Opening';
 import SignupScreen from './pages/Signup';
 import RewardsScreen from './pages/Rewards';
 import ProfileScreen from './pages/Profile';
-import NewHomeScreen from './pages/NewHome';
+import HomeScreen from './pages/Home';
 import VentureCategoryPage from './pages/VentureCategory';
 import VenturePage from './pages/Venture';
+import ProductPage from './pages/Product';
 
 import Stack from './pages/components/Navigation';
 
@@ -45,7 +46,7 @@ function MainTabs() {
         headerShown: false,
       })}
     >
-      <Tab.Screen name="Home" component={NewHomeScreen} />
+      <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Explore" component={ExploreScreen} />
       <Tab.Screen name="Rewards" component={RewardsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
@@ -63,6 +64,7 @@ export default function App() {
         <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
         <Stack.Screen name="VentureCategory" component={VentureCategoryPage} options={{ headerShown: false }} />
         <Stack.Screen name="Venture" component={VenturePage} options={{ headerShown: false }} />
+        <Stack.Screen name="Product" component={ProductPage} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

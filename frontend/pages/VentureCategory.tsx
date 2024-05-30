@@ -1,32 +1,45 @@
 import React from 'react';
-import { View, StyleSheet, FlatList, Text } from 'react-native';
+import { View, StyleSheet, FlatList, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { useState } from "react";
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/Entypo';
 
 import colors from '../assets/themes/Colors';
 import appStyles from '../assets/themes/Styles';
 
 import VentureCardMedium from "./components/VentureCardMedium"
 
-const hikingPhoto = "https://www.hellobc.com/content/uploads/2018/02/6-2756-1024x683.jpg";
-
-const VentureCategoryPage = ({ route, navigation}) => {
+const VentureCategoryPage = ({ route, navigation }) => {
     const { category, cards } = route.params;
+    // const navigation = useNavigation();
+
+    console.log(cards);
+    // console.log('each thing:', cards.map(card => [card[0], card[1], card[2], card[3]]));
+
+    const handleBack = () => {
+        navigation.goBack()
+        console.log('going back');
+    }
     
     return (
         <View style={appStyles.container}>
-            <Text>{category}</Text>
+            <TouchableOpacity style={appStyles.backButton} onPress={handleBack} >
+                <Icon name="chevron-left" size={30} color={colors.accent} />
+            </TouchableOpacity>
+            <View style={styles.headerContainer}>
+                <Text style={styles.title}>{category}</Text>
+            </View>
             <FlatList
-                style={styles.container}
+                contentContainerStyle={styles.listContainer}
                 data={cards}
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => (
-                    <VentureCardMedium 
+                    <VentureCardMedium
+                        title={item.title}
+                        image={item.image}
+                        points={item.points}
+                        description={item.description}
                         navigation={navigation}
-                        title={item[0]} 
-                        image={item[1]} 
-                        points={item[2]} 
-                        description={item[3]} 
                     />
                 )}
                 keyExtractor={(item, index) => index.toString()}
@@ -36,16 +49,20 @@ const VentureCategoryPage = ({ route, navigation}) => {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    headerContainer: {
         marginTop: 50,
     },
     title: {
-        marginTop:50,
-        fontSize: 25,
+        marginTop: 20,
+        fontSize: 24,
         fontWeight: 'bold',
-        marginLeft: 20,
+        alignSelf: 'center',
     },
-    
+    listContainer: {
+        flexDirection: 'column',
+        marginTop: 10,
+        width: 400,
+    },
 });
 
 export default VentureCategoryPage;

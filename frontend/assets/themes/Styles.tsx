@@ -25,6 +25,8 @@ const appStyles = StyleSheet.create({
         position: 'absolute',
         top: 70,
         left: 20,
+        // borderWidth: 2,
+        // borderColor: 'black'
     },
     smallButton: {
         borderRadius: 30,

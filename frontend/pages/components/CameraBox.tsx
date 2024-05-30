@@ -6,6 +6,8 @@ import { Button } from "react-native-elements";
 import * as ImageManipulator from 'expo-image-manipulator';
 import * as FileSystem from 'expo-file-system';
 
+import colors from '../../assets/themes/Colors';
+import appStyles from '../../assets/themes/Styles';
 
 const CameraBox = () => {
     const [uri, setUri] = useState(null);
@@ -62,21 +64,24 @@ const CameraBox = () => {
       
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={openCamera}>
-                {base64 ? (
-                    <Image source={{ uri: uri }} style={styles.image} />
-                ) : (
-                    <TouchableOpacity onPress={openCamera}>
-                        <Image 
-                            source={{uri: 'https://t4.ftcdn.net/jpg/01/07/57/91/360_F_107579101_QVlTG43Fwg9Q6ggwF436MPIBTVpaKKtb.jpg'}}
-                            style={styles.image} />
-                        <Text>Attach Photo</Text>
-                    </TouchableOpacity>
-                )}
-            </TouchableOpacity>
-            <Button buttonStyle={styles.button}
-            titleStyle={styles.buttonTitle}
-                title="Post Your Venture"
+            <View style={styles.cameraContainer}>
+                <TouchableOpacity onPress={openCamera}>
+                    {base64 ? (
+                        <Image source={{ uri: uri }} style={styles.image} />
+                    ) : (
+                        <TouchableOpacity onPress={openCamera}>
+                            <Image 
+                                source={{uri: 'https://t4.ftcdn.net/jpg/01/07/57/91/360_F_107579101_QVlTG43Fwg9Q6ggwF436MPIBTVpaKKtb.jpg'}}
+                                style={styles.cameraImage} />
+                            <Text style={styles.text}>Your Photo</Text>
+                        </TouchableOpacity>
+                    )}
+                </TouchableOpacity>
+            </View>
+            <Button 
+                buttonStyle={appStyles.button}
+                titleStyle={appStyles.buttonTitle}
+                title="Post"
                 onPress={() => handleUpload(base64)}
             />
         </View>
@@ -86,30 +91,33 @@ const CameraBox = () => {
 const styles = StyleSheet.create({
     container: {
         width: 350, 
-        height: 150,
-        borderRadius: 20,
-        flexDirection: 'column',
-        borderWidth: 1,
-        borderColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 20,
+    },
+    cameraContainer: {
+        width: 350, 
+        height: 200,
+        borderRadius: 20,
+        flexDirection: 'column',
+        borderWidth: 2,
+        borderColor: colors.lightAccent,
+        borderStyle: 'dashed',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     image: {
-      width: 100, 
-      height: 100,
-      marginTop: 80,
+        width: 70, 
+        height: 70,
     },
-    button: {
-        marginTop: 40,
-        borderRadius: 50,
-        backgroundColor: '#5DB075',
-        width: 250,
-        fontWeight: 'bold',
+    cameraImage: {
+        width: 70, 
+        height: 70,
+        alignSelf: 'center'
     },
-    buttonTitle:{
-        fontWeight: 'bold',
-    }
+    text: {
+        fontSize: 12,
+        alignSelf: 'center'
+    },
 });
 
 export default CameraBox;

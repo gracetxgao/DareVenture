@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     sideBoxNumber: {
-        fontSize: 25,
+        fontSize: 24,
         fontWeight: 'bold',
         color: '#0D4803',
     },

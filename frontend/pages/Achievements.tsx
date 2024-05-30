@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import VenturePointsEarned from "./components/VenturePointsEarnedBubble";
-import ProductCard from "./components/ProductCard";
+import ProductCardSmall from "./components/ProductCardSmall";
 
 const AchievementsScreen = () => {
     return (
@@ -11,7 +11,7 @@ const AchievementsScreen = () => {
             <View style={styles.textContainer}>
                 <Text style={styles.text}>Only 150 Points Away From Redeeming</Text>
            </View>
-             <ProductCard title={"Atom Hoody Women's"} redeemed={false} image='https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S24-X000009293-Atom-Lightweight-Hoody-Alpine-Rose-Women-s-Front-View.jpg?auto=format%2Ccompress&q=75&ixlib=react-9.7.0&w=1350' 
+             <ProductCardSmall title={"Atom Hoody Women's"} redeemed={false} image='https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S24-X000009293-Atom-Lightweight-Hoody-Alpine-Rose-Women-s-Front-View.jpg?auto=format%2Ccompress&q=75&ixlib=react-9.7.0&w=1350' 
              company="Arc'Teryx" desc= '2000 points for 20% off'/>
         </View>
     )
