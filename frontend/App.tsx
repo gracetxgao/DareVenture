@@ -17,6 +17,7 @@ import HomeScreen from './pages/Home';
 import VentureCategoryPage from './pages/VentureCategory';
 import VenturePage from './pages/Venture';
 import ProductPage from './pages/Product';
+import BadgesPage from './pages/Badges';
 
 import Stack from './pages/components/Navigation';
 
@@ -65,6 +66,7 @@ export default function App() {
         <Stack.Screen name="VentureCategory" component={VentureCategoryPage} options={{ headerShown: false }} />
         <Stack.Screen name="Venture" component={VenturePage} options={{ headerShown: false }} />
         <Stack.Screen name="Product" component={ProductPage} options={{ headerShown: false }} />
+        <Stack.Screen name="Badges" component={BadgesPage} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -38,10 +38,10 @@ const ProfileScreen = ({ navigation }) => {
                     <VenturesCompleted />
                     <Button
                         buttonStyle={styles.button}
-                        title="Venture Gallery"
+                        title="Badges"
                         titleStyle={styles.buttonTitle}
                         onPress={() =>
-                            navigation.navigate('VentureGallery')
+                            navigation.navigate('Badges')
                         }
                     />
                 </View>
@@ -84,12 +84,13 @@ const styles = StyleSheet.create({
     },
     pointsRight: {
         flexDirection: 'column',
-        //borderWidth: 1,
-        //borderColor: 'black',
+        // borderWidth: 1,
+        // borderColor: 'black',
         paddingRight: 8,
         paddingLeft: 8,
         borderRadius: 10,
-        
+        alignItems: 'center',       
+        justifyContent: 'center',
         
     },
     pointsLeft: {
@@ -140,10 +141,10 @@ const styles = StyleSheet.create({
         fontSize: 9,
     },
     button: {
-        backgroundColor: 'white',
+        backgroundColor: '#34623F',
         borderRadius: 10,
-        height: 35,
-        width: 140,
+        height: 40,
+        width: 70,
         marginTop: 2,
         marginBottom: 2,
         marginLeft: 10,
@@ -158,9 +159,8 @@ const styles = StyleSheet.create({
     },
     buttonTitle: {
         fontSize: 15,
-        color: "black",
-        fontWeight: 'bold',
-        
+        color: "white",
+        fontWeight: 'bold',        
     },
 });
 
