@@ -1,10 +1,19 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Badge from './components/Badge';
+
+const compassImg = require('../assets/compass.png');
 
 const BadgesPage = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>my badges</Text>
+      <Badge 
+        title="Adventure Seeker"
+        description="Complete 5 Ventures"
+        image={compassImg}
+        />
+
     </View>
   );
 };

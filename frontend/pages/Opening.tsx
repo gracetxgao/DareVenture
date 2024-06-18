@@ -6,7 +6,7 @@ import { Image } from 'react-native';
 import colors from '../assets/themes/Colors'
 import appStyles from '../assets/themes/Styles'
 
-const Logo = require('../assets/DareVentureLogo.png');
+const Logo = require('../assets/compass.png');
 
 const OpeningScreen = ({ navigation }) => {
     return (

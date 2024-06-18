@@ -8,7 +8,8 @@ export type RootStackParamList = {
   Venture: { title: string, image: string, points: string, description: string };
   VentureCategory: { category: string; cards: Array<Array<String>> };
   Rewards: undefined
-  Product: { item: string, brand: string, image: string, points: string, description: string, redeemed: Boolean };
+  Product: { item: string, brand: string, image: string, points: string, description: string, redeemed: Boolean }
+  Badges: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
