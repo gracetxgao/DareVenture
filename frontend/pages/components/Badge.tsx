@@ -5,7 +5,8 @@ import { Button, Image } from 'react-native-elements';
 const Badge = ({ title, description, image }) => {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
+      <Image source={image} style={styles.image}
+      />
       <View style={styles.rightContainer}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>{description}</Text>
@@ -17,16 +18,14 @@ const Badge = ({ title, description, image }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    borderWidth: 1,
-    borderColor: 'black',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   rightContainer: {
     flexDirection: 'column',
-    borderWidth: 1,
-    borderColor: 'black',
-    padding: 15,
+    padding: 18,
     backgroundColor: 'white',
+    paddingLeft: 30,
+    width: 250
   },
   title: {
     fontSize: 16,
